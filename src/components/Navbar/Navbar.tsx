@@ -64,9 +64,6 @@ const Navbar = () => {
           )}
         </NavContainer>
       </Nav>
-      {/* {openSideNav && (
-        <SideNav openSideNav={openSideNav} setOpenSideNav={setOpenSideNav} />
-      )} */}
     </>
   );
 };
