@@ -1,4 +1,3 @@
-import React from "react";
 import { OverLay, SideNavContainer, SideNavLinks, SideNavLink } from "./style";
 import { SideNavProps } from "../../utils/types";
 import { navLinks } from "../../utils/constants";
