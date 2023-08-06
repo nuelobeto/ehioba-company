@@ -5,7 +5,7 @@ import { NavLink as BaseNavLink } from "react-router-dom";
 export const Container = {
   maxWidth: "960px",
   margin: "0 auto",
-  padding: "1rem 2rem",
+  padding: "0.5rem 2rem",
 };
 
 export const Nav = styled.nav`
@@ -13,6 +13,9 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034);
+  @media (max-width: 768px) {
+    height: 5rem;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -27,6 +30,11 @@ export const Logo = styled.div`
   flex: 1;
   & img {
     width: 12rem;
+  }
+  @media (max-width: 768px) {
+    & img {
+      width: 7rem;
+    }
   }
 `;
 

@@ -16,11 +16,11 @@ export const OverLay = styled.div<StyledPropBool>`
 `;
 export const SideNavContainer = styled.div`
   height: 100vh;
-  width: 50%;
+  width: 60%;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 7rem 2rem;
+  padding: 5rem 1rem;
   background-color: ${COLORS.white};
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034);
 `;
@@ -34,8 +34,8 @@ export const SideNavLinks = styled.div`
 `;
 export const SideNavLink = styled(BaseNavLink)`
   text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   padding: 1.5rem 0;
   text-decoration: none;
   color: ${COLORS.black};

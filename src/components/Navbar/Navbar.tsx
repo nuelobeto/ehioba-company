@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LOGO } from "../../assets/icons";
 import {
   Logo,
@@ -64,9 +64,6 @@ const Navbar = () => {
           )}
         </NavContainer>
       </Nav>
-      {/* {openSideNav && (
-        <SideNav openSideNav={openSideNav} setOpenSideNav={setOpenSideNav} />
-      )} */}
     </>
   );
 };
