@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { COLORS } from "../../utils/colors";
 import { NavLink as BaseNavLink } from "react-router-dom";
+import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 export const Container = {
-  maxWidth: "960px",
+  maxWidth: "1000px",
   margin: "0 auto",
   padding: "0.5rem 2rem",
 };
@@ -12,7 +13,17 @@ export const Nav = styled.nav`
   height: 7rem;
   display: flex;
   align-items: center;
+  color: ${(props) =>
+    props.$scrolled ? `${COLORS.black}` : `${COLORS.white}`};
+  background-color: ${(props) => (props.$scrolled ? `${COLORS.white}` : "")};
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034);
+  position: ${(props) => (props.$scrolled ? "sticky" : "absolute")};
+  opacity: 0.99;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
   @media (max-width: 768px) {
     height: 5rem;
   }
@@ -51,7 +62,6 @@ export const NavLink = styled(BaseNavLink)`
   font-weight: 600;
   padding: 0.5rem 1.5rem;
   text-decoration: none;
-  color: ${COLORS.black};
   border-radius: 0.2rem;
   &:hover {
     color: ${COLORS.lightGreen};
@@ -62,8 +72,16 @@ export const NavLink = styled(BaseNavLink)`
   }
 `;
 
-export const iconStyles = {
-  fontSize: "2rem",
-  color: `${COLORS.black}`,
-  zIndex: 100,
-};
+export const OpenBtn = styled(AiOutlineMenuFold)`
+  font-size: 2rem;
+  color: ${(props) =>
+    props.$scrolled ? `${COLORS.black}` : `${COLORS.white}`};
+  z-index: 100;
+`;
+
+export const CloseBtn = styled(AiOutlineMenuUnfold)`
+  font-size: 2rem;
+  color: ${(props) =>
+    props.$scrolled ? `${COLORS.white}` : `${COLORS.black}`};
+  z-index: 100;
+`;
