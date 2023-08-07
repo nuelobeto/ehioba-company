@@ -106,7 +106,7 @@ const Button = styled.button<{ $dark?: boolean }>`
 `;
 
 const Carousel = () => {
-  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = React.useRef<any | null>(null);
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const handleClick = (direction: string) => {
     if (direction === "left") {
