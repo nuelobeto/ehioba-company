@@ -13,6 +13,7 @@ export const OverLay = styled.div<StyledPropBool>`
   transition: 0.5s ease-in-out;
   transform: translateX(${(props) => (props.open ? "0" : "100%")});
   visibility: ${(props) => (props.open ? "visible" : "hidden")};
+  z-index: 2;
 `;
 export const SideNavContainer = styled.div`
   height: 100vh;
@@ -22,6 +23,7 @@ export const SideNavContainer = styled.div`
   right: 0;
   padding: 5rem 1rem;
   background-color: ${COLORS.white};
+  opacity: 0.9;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034);
 `;
 export const SideNavLinks = styled.div`

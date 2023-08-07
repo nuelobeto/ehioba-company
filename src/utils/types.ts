@@ -6,3 +6,9 @@ export type SideNavProps = {
 export type StyledPropBool = {
   open: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
+
+export type carouselDataType = {
+  image: string;
+  mainText: string;
+  subText: string;
+};

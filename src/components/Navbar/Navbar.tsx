@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LOGO } from "../../assets/icons";
+import { LOGO } from "../../assets/images";
 import {
   Logo,
   Nav,
@@ -7,18 +7,16 @@ import {
   NavLinks,
   NavLink,
   Container,
-  iconStyles,
+  OpenBtn,
+  CloseBtn,
 } from "./styles";
 import { navLinks } from "../../utils/constants";
-import {
-  AiOutlineMenuFold as OpenIcon,
-  AiOutlineMenuUnfold as CloseIcon,
-} from "react-icons/ai";
 import SideNav from "../SideNav/SideNav";
 
 const Navbar = () => {
   const [viewportWidth, setViewPortWidth] = useState(window.innerWidth);
   const [openSideNav, setOpenSideNav] = useState(false);
+  const [scrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,9 +25,20 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
 
+  useEffect(() => {
+    window.onscroll = function () {
+      const currentScrollPos = window.scrollY;
+      if (currentScrollPos > 200) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <Nav>
+      <Nav $scrolled={scrolled}>
         <NavContainer style={Container}>
           <Logo>
             <img src={LOGO} alt="logo" />
@@ -37,14 +46,14 @@ const Navbar = () => {
           {viewportWidth < 850 ? (
             <>
               {!openSideNav && (
-                <OpenIcon
-                  style={iconStyles}
+                <OpenBtn
+                  $scrolled={scrolled}
                   onClick={() => setOpenSideNav(!openSideNav)}
                 />
               )}
               {openSideNav && (
-                <CloseIcon
-                  style={iconStyles}
+                <CloseBtn
+                  $scrolled={scrolled}
                   onClick={() => setOpenSideNav(!openSideNav)}
                 />
               )}
