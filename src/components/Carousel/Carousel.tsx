@@ -5,12 +5,6 @@ import styled from "styled-components";
 import { COLORS } from "../../utils/colors";
 import { useNavigate } from "react-router-dom";
 
-// interface PropType {
-//   $side?: string;
-//   $slide?: number;
-//   $dark: boolean;
-// }
-
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -106,6 +100,7 @@ const Button = styled.button<{ $dark?: boolean }>`
 `;
 
 const Carousel = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const timeoutRef = React.useRef<any | null>(null);
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const handleClick = (direction: string) => {
