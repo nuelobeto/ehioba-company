@@ -9,6 +9,9 @@ const Overview = styled.div`
   width: 100%;
   padding: 5rem 0;
   background-color: ${COLORS.lightGray};
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
 `;
 const OverviewContainer = styled.div`
   display: flex;
@@ -26,7 +29,7 @@ const OverviewText = styled.div`
   line-height: 1.5;
   padding: 0 2rem;
   @media (max-width: 768px) {
-    padding: 2rem 0;
+    padding: 1rem 0;
     margin: 1rem auto;
   }
 
@@ -44,13 +47,29 @@ const OverviewText = styled.div`
     }
     @media (max-width: 768px) {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
   }
   & > p {
     font-size: 1rem;
     font-weight: 400;
     color: ${COLORS.textGray};
+  }
+`;
+
+const Button = styled.button`
+  padding: 1rem 2rem;
+  margin: 1rem 0rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  align-self: flex-start;
+  background-color: ${COLORS.darkGreen};
+  color: ${COLORS.white};
+  cursor: pointer;
+  border: none;
+  &:hover {
+    opacity: 0.8;
   }
 `;
 
@@ -78,6 +97,7 @@ const Home = () => {
               Governance consultancy committed to building a future where
               economic success and social responsibility co-exist.
             </p>
+            <Button>ABOUT US</Button>
           </OverviewText>
           <OverviewImage>
             <img src={OVERVIEW_IMAGE} alt="overview" />

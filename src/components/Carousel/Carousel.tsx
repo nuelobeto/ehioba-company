@@ -5,11 +5,11 @@ import styled from "styled-components";
 import { COLORS } from "../../utils/colors";
 import { useNavigate } from "react-router-dom";
 
-interface PropType {
-  side: string;
-  slide: number;
-  contact: string;
-}
+// interface PropType {
+//   $side?: string;
+//   $slide?: number;
+//   $dark: boolean;
+// }
 
 const Container = styled.div`
   width: 100%;
@@ -18,7 +18,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
 `;
-const Arrow = styled.div<PropType>`
+const Arrow = styled.div<{ $side?: string }>`
   width: 3rem;
   height: 3rem;
   color: ${COLORS.white};
@@ -41,10 +41,10 @@ const Arrow = styled.div<PropType>`
     opacity: 0.8;
   }
 `;
-const Wrapper = styled.div<PropType>`
+const Wrapper = styled.div<{ $slide: number }>`
   height: 100%;
   display: flex;
-  transform: translateX(${(props) => props.$slide * -100}vw);
+  transform: translateX(${(props) => props.$slide * -100 || 0}vw);
   transition: all 1s ease;
 `;
 const Slide = styled.div`
@@ -89,14 +89,14 @@ const SubText = styled.h6`
     font-size: 1rem;
   }
 `;
-const Button = styled.button<PropType>`
+const Button = styled.button<{ $dark?: boolean }>`
   padding: 1rem 2rem;
   margin: 1rem 2rem;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 0.3rem;
   background-color: ${(props) =>
-    props.$contact ? COLORS.darkGreen : COLORS.lightGreen};
+    props.$dark ? COLORS.darkGreen : COLORS.lightGreen};
   color: ${COLORS.white};
   cursor: pointer;
   border: none;
@@ -150,7 +150,7 @@ const Carousel = () => {
               <SubText>{slide.subText}</SubText>
               <div>
                 <Button
-                  $contact={"contact"}
+                  $dark
                   onClick={() => {
                     navigate("/about");
                   }}
