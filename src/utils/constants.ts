@@ -1,4 +1,10 @@
 import {
+  APPROACH_IMAGE_1,
+  APPROACH_IMAGE_2,
+  APPROACH_IMAGE_3,
+  APPROACH_IMAGE_4,
+  APPROACH_IMAGE_5,
+  APPROACH_IMAGE_6,
   SLIDER_IMAGE_1,
   SLIDER_IMAGE_2,
   SLIDER_IMAGE_3,
@@ -46,5 +52,44 @@ export const CardsData: CardDataType[] = [
     mainText: "Analysis and Strategic Development",
     subText:
       "Based on our assessment,We provide a comprehensive analysis of your company's ESG performance and develop a strategy to improve your ESG performance.",
+  },
+];
+
+export const ServicesData: CarouselDataType[] = [
+  {
+    image: `${APPROACH_IMAGE_1}`,
+    mainText: "Initial Consultation",
+    subText:
+      " We meet our clients to discuss their needs and objectives regarding sustainability and ESG. We then develop a tailored strategy to meet their needs and objectives.",
+  },
+  {
+    image: `${APPROACH_IMAGE_2}`,
+    mainText: "ESG Assessment",
+    subText:
+      "We evaluate the current Environmental, Social and Governance practices and performance of our clients and identify opportunities for improvement and potential risk mitigation.",
+  },
+  {
+    image: `${APPROACH_IMAGE_3}`,
+    mainText: "ESG Strategy Development",
+    subText:
+      "We develop action plans, set objectives and ESG strategies that align with our clients' distinct goals and values, Then develop a road map for implementation and actualization.",
+  },
+  {
+    image: `${APPROACH_IMAGE_4}`,
+    mainText: "Implementation and verification",
+    subText:
+      " we guide the implementation of the Designed Strategy and verify the measures of impact by working hand in hand with our clients to implement ESG initiatives, maximizing value and impact",
+  },
+  {
+    image: `${APPROACH_IMAGE_5}`,
+    mainText: "Reporting and Communication",
+    subText:
+      "We provide regular reports to our clients to keep them informed about the progress and effectiveness of their ESG initiatives by communicating their ESG performance and Improvements.",
+  },
+  {
+    image: `${APPROACH_IMAGE_6}`,
+    mainText: "Support and Continuous Improvement",
+    subText:
+      "We maintain relationships with clients to provide ongoing support, assistance and continuously improve their ESG performance and impact by identifying new opportunities, trends and areas of improvement",
   },
 ];

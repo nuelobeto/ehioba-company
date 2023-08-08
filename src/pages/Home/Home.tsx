@@ -5,8 +5,11 @@ import { Container } from "../../components/Navbar/styles";
 import { OVERVIEW_IMAGE } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
-import { CardsData } from "../../utils/constants";
+import { CardsData, ServicesData } from "../../utils/constants";
 import {
+  ApproachContainer,
+  ApproachImage,
+  ApproachText,
   Button,
   Card,
   CardContainer,
@@ -27,7 +30,7 @@ const Home = () => {
       <Section>
         <SectionContainer style={Container} $display={"flex"}>
           <SectionText>
-            <SectionTitle>Overview</SectionTitle>
+            <SectionTitle>Our Overview</SectionTitle>
             <p>
               we are a global and progressive Environmental, Social and
               Governance consultancy committed to building a future where
@@ -48,7 +51,7 @@ const Home = () => {
       </Section>
       <Section $bg={`${COLORS.lightGray}`}>
         <SectionContainer style={Container}>
-          <SectionTitle>Services</SectionTitle>
+          <SectionTitle>Our Services</SectionTitle>
           <CardContainer>
             {CardsData.map((card, index) => (
               <Card key={index}>
@@ -64,6 +67,24 @@ const Home = () => {
               </Card>
             ))}
           </CardContainer>
+        </SectionContainer>
+      </Section>
+      <Section>
+        <SectionContainer style={Container}>
+          <SectionTitle>Our Approach</SectionTitle>
+          <ApproachContainer>
+            {ServicesData.map((service, index) => (
+              <div className="common" key={index}>
+                <ApproachText>
+                  <h3>{service.mainText}</h3>
+                  <p>{service.subText}</p>
+                </ApproachText>
+                <ApproachImage>
+                  <img src={service.image} alt={service.mainText} />
+                </ApproachImage>
+              </div>
+            ))}
+          </ApproachContainer>
         </SectionContainer>
       </Section>
       <Footer />
