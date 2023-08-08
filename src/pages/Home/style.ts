@@ -115,3 +115,43 @@ export const LinkButton = styled(Button)`
     border: 0.1rem solid ${COLORS.lightGreen};
   }
 `;
+export const ApproachContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  & > :nth-child(even) {
+    flex-direction: row-reverse;
+    & img {
+      margin-right: auto;
+    }
+  }
+  & .common {
+    display: flex;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+  }
+`;
+export const ApproachText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  & > h3 {
+    margin: 1rem 0;
+  }
+`;
+export const ApproachImage = styled(OverviewImage)`
+  justify-content: flex-end;
+  & > img {
+    width: 50%;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+    @media (max-width: 768px) {
+      width: 80%;
+      margin: 1.5rem auto;
+    }
+  }
+`;
