@@ -4,4 +4,8 @@ export const ROUTES = {
   contact: "/contact",
   insights: "/insights",
   blog: "/blog",
+  admin: "/admin",
+  register: "/register",
+  login: "/login",
+  reset_password: "/reset-password",
 };
