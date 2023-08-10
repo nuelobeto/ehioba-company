@@ -9,7 +9,7 @@ import {
   SLIDER_IMAGE_2,
   SLIDER_IMAGE_3,
 } from "../assets/images";
-import { CardDataType, CarouselDataType } from "./types";
+import { CardDataType, CarouselDataType, FooterLinksType } from "./types";
 
 export const navLinks: string[] = [
   "home",
@@ -91,5 +91,43 @@ export const ServicesData: CarouselDataType[] = [
     mainText: "Support and Continuous Improvement",
     subText:
       "We maintain relationships with clients to provide ongoing support, assistance and continuously improve their ESG performance and impact by identifying new opportunities, trends and areas of improvement",
+  },
+];
+
+export const CompanyLinks: FooterLinksType[] = [
+  {
+    text: "About",
+    link: "/about",
+  },
+  {
+    text: "Contact",
+    link: "/contact",
+  },
+  {
+    text: "Insights",
+    link: "/insights",
+  },
+  {
+    text: "Blog",
+    link: "/blog",
+  },
+];
+
+export const SupportLinks: FooterLinksType[] = [
+  {
+    text: "FAQ",
+    link: "/support",
+  },
+  {
+    text: "Cookie Policy",
+    link: "/support",
+  },
+  {
+    text: "Privacy Policy",
+    link: "/support",
+  },
+  {
+    text: "Terms of Use",
+    link: "/support",
   },
 ];

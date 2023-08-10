@@ -17,3 +17,8 @@ export type CardDataType = {
   mainText: string;
   subText: string;
 };
+
+export type FooterLinksType = {
+  text: string;
+  link: string;
+};

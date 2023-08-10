@@ -14,6 +14,7 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   display: flex;
+  gap: 0.5rem;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -54,7 +55,7 @@ export const Button = styled.button`
 `;
 export const Socials = styled.div`
   display: flex;
-  & > svg {
+  & svg {
     font-size: 2rem;
     margin-right: 0.5rem;
   }
