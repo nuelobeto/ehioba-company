@@ -30,6 +30,10 @@ export const FooterSection = styled.div`
   & > p {
     margin: 0.5rem 0;
     color: ${COLORS.textGray};
+    cursor: pointer;
+    &:hover {
+      color: ${COLORS.lightGreen};
+    }
   }
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -58,6 +62,10 @@ export const Socials = styled.div`
   & svg {
     font-size: 2rem;
     margin-right: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      color: ${COLORS.lightGreen};
+    }
   }
 `;
 export const CopyRight = styled.div`
