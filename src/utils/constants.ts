@@ -9,7 +9,7 @@ import {
   SLIDER_IMAGE_2,
   SLIDER_IMAGE_3,
 } from "../assets/images";
-import { CardDataType, CarouselDataType } from "./types";
+import { CardDataType, CarouselDataType, FooterLinksType } from "./types";
 
 export const navLinks: string[] = [
   "home",
@@ -103,19 +103,40 @@ export const tableHeadData = [
   "Action",
 ];
 
-export const tableBodyData = [
+export const CompanyLinks: FooterLinksType[] = [
   {
-    id: "64d3993ded3fca7d0220bb40",
-    author: "Ehioba",
-    title: "India's Green Credit Programme: What It Is & How To Prepare",
-    category: "Blog",
-    date: "July 22, 2023",
+    text: "About",
+    link: "/about",
   },
   {
-    id: "64d3993ded3fca7d0220bb40",
-    author: "Ehioba",
-    title: "India's Green Credit Programme: What It Is & How To Prepare",
-    category: "Blog",
-    date: "July 22, 2023",
+    text: "Contact",
+    link: "/contact",
+  },
+  {
+    text: "Insights",
+    link: "/insights",
+  },
+  {
+    text: "Blog",
+    link: "/blog",
+  },
+];
+
+export const SupportLinks: FooterLinksType[] = [
+  {
+    text: "FAQ",
+    link: "/support",
+  },
+  {
+    text: "Cookie Policy",
+    link: "/support",
+  },
+  {
+    text: "Privacy Policy",
+    link: "/support",
+  },
+  {
+    text: "Terms of Use",
+    link: "/support",
   },
 ];

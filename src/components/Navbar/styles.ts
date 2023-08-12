@@ -41,6 +41,7 @@ export const Logo = styled.div`
   flex: 1;
   & img {
     width: 12rem;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     & img {

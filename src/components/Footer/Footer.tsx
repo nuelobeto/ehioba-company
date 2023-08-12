@@ -14,30 +14,32 @@ import {
   Input,
   Socials,
 } from "./style";
+import { useNavigate } from "react-router-dom";
+import { CompanyLinks, SupportLinks } from "../../utils/constants";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <FooterContainer>
       <Container>
         <FooterSection>
-          <Logo style={{ marginRight: "1rem" }}>
+          <Logo onClick={() => navigate("/home")}>
             <img src={LOGO} alt="logo" />
           </Logo>
         </FooterSection>
         <FooterSection>
           <h3>Company</h3>
-          <p>About</p>
-          <p>Contact</p>
-          <p>Insights</p>
-          <p>Blog</p>
+          {CompanyLinks.map((link, index) => (
+            <p key={index}>{link.text}</p>
+          ))}
         </FooterSection>
         <FooterSection>
           <h3>Support</h3>
-          <p>FAQs</p>
-          <p>Cookie Policy</p>
-          <p>Privacy Policy</p>
-          <p>Terms of Use</p>
-          <Socials></Socials>
+          {SupportLinks.map((link, index) => (
+            <p onClick={() => navigate(`${link.link}`)} key={index}>
+              {link.text}
+            </p>
+          ))}
         </FooterSection>
         <FooterSection>
           <h3>Get in touch</h3>
@@ -45,9 +47,15 @@ const Footer = () => {
           <p>London.EC2A 4NE.</p>
           <p>+44 7310 152929</p>
           <Socials>
-            <AiFillLinkedin />
-            <AiFillMail />
-            <AiFillTwitterSquare />
+            <a href="https://www.linkedin.com/company/ehioba-company/">
+              <AiFillLinkedin />
+            </a>
+            <a href="">
+              <AiFillMail />
+            </a>
+            <a href="https://twitter.com/ehiobacom">
+              <AiFillTwitterSquare />
+            </a>
           </Socials>
         </FooterSection>
         <FooterSection>

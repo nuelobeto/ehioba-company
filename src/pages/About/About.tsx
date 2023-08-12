@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { ABOUT_IMAGE, WHO_WE_ARE, TEAM } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -11,17 +10,7 @@ import {
   SectionText,
   SectionTitle,
 } from "../Home/style";
-import { HeroContainer, HeroImage, HeroText } from "./style";
-
-const DarkSectionTitle = styled(SectionTitle)`
-  text-align: center;
-  font-weight: 700;
-  &::after {
-    content: "";
-    background-color: ${COLORS.lightGreen};
-    margin: -1rem auto;
-  }
-`;
+import { DarkSectionTitle, HeroContainer, HeroImage, HeroText } from "./style";
 
 const About = () => {
   return (

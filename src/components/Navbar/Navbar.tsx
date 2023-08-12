@@ -12,6 +12,7 @@ import {
 } from "./styles";
 import { navLinks } from "../../utils/constants";
 import SideNav from "../SideNav/SideNav";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [viewportWidth, setViewPortWidth] = useState(window.innerWidth);
@@ -36,11 +37,13 @@ const Navbar = () => {
     };
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <>
       <Nav $scrolled={scrolled}>
         <NavContainer style={Container}>
-          <Logo>
+          <Logo onClick={() => navigate("/home")}>
             <img src={LOGO} alt="logo" />
           </Logo>
           {viewportWidth < 850 ? (
