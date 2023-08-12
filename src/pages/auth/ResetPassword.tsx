@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../store/useAuth";
 import { toast } from "react-toastify";
 import { ResetPasswordT } from "../../types/types";
+import { FaSpinner } from "react-icons/fa";
 
 const ResetPassword = () => {
   const { resetPassword, user, loading } = useAuth((state) => state);
@@ -87,7 +88,9 @@ const ResetPassword = () => {
               }
             />
           </FormGroup>
-          <SubmitBtn>{!loading ? "Update Password" : "Loading..."}</SubmitBtn>
+          <SubmitBtn>
+            {!loading ? "Update Password" : <FaSpinner className="spinner" />}
+          </SubmitBtn>
         </AuthBody>
 
         <AuthFooter>

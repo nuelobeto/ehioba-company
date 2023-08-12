@@ -94,6 +94,15 @@ export const ServicesData: CarouselDataType[] = [
   },
 ];
 
+export const tableHeadData = [
+  "Id",
+  "Title",
+  "Category",
+  "Author",
+  "Date",
+  "Action",
+];
+
 export const CompanyLinks: FooterLinksType[] = [
   {
     text: "About",

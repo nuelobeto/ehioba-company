@@ -12,6 +12,7 @@ import { ROUTES } from "../../app-navigation/routes";
 import { useEffect, useState } from "react";
 import useAuth from "../../store/useAuth";
 import { LoginT } from "../../types/types";
+import { FaSpinner } from "react-icons/fa";
 
 const Login = () => {
   const { login, user, loading } = useAuth((state) => state);
@@ -68,7 +69,9 @@ const Login = () => {
               }
             />
           </FormGroup>
-          <SubmitBtn>{!loading ? "Log In" : "Loading..."}</SubmitBtn>
+          <SubmitBtn>
+            {!loading ? "Log In" : <FaSpinner className="spinner" />}
+          </SubmitBtn>
         </AuthBody>
 
         <AuthFooter>

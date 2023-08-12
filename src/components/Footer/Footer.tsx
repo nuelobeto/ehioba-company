@@ -36,7 +36,7 @@ const Footer = () => {
         <FooterSection>
           <h3>Support</h3>
           {SupportLinks.map((link, index) => (
-            <p onClick={() => navigate(`/${link.link}`)} key={index}>
+            <p onClick={() => navigate(`${link.link}`)} key={index}>
               {link.text}
             </p>
           ))}

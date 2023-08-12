@@ -7,4 +7,8 @@ export const COLORS = {
   gray: "#e5e5e5",
   lightGray: "#F5F5F5",
   textGray: "#727272",
+  mediumGray: "#dddddd",
+  veryLightGray: "#fcfcfc",
+  danger: "#ff6347",
+  darkDanger: "#e74c3c",
 };
