@@ -23,9 +23,10 @@ import { FaSpinner } from "react-icons/fa";
 type EditorProps = {
   setOpenTextEditor: React.Dispatch<React.SetStateAction<boolean>>;
   post: PostT | null;
+  setPost: React.Dispatch<React.SetStateAction<PostT | null>>;
 };
 
-const TextEditor = ({ setOpenTextEditor, post }: EditorProps) => {
+const TextEditor = ({ setOpenTextEditor, post, setPost }: EditorProps) => {
   const { addPost, addingPost, updatePost, updatingPost } = usePost(
     (state) => state
   );
@@ -80,6 +81,11 @@ const TextEditor = ({ setOpenTextEditor, post }: EditorProps) => {
     }
   };
 
+  const handleCloseEditor = () => {
+    setPost(null);
+    setOpenTextEditor(false);
+  };
+
   useEffect(() => {
     if (!post) {
       return;
@@ -95,7 +101,7 @@ const TextEditor = ({ setOpenTextEditor, post }: EditorProps) => {
       <Container>
         <Header>
           <h1>Create a New Post</h1>
-          <BackBtn onClick={() => setOpenTextEditor(false)}>
+          <BackBtn onClick={handleCloseEditor}>
             <BiArrowBack />
             <span>Back</span>
           </BackBtn>
