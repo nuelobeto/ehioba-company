@@ -1,12 +1,25 @@
-import { BLOG_IMAGE, COMING_SOON } from "../../assets/images";
+import {
+  AiFillClockCircle,
+  AiOutlineFileSearch,
+  AiFillCalendar,
+  AiOutlineArrowRight,
+} from "react-icons/ai";
+import { BLOG_IMAGE } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import { HeroContainer, HeroImage, HeroText } from "../About/style";
 import {
-  HeroContainer,
-  HeroImage,
-  HeroSubText,
-  HeroText,
-} from "../About/style";
+  PostContainer,
+  PostSectionTitle,
+  PostTitle,
+  SearchContainer,
+  PostSection,
+  PostCard,
+  PostDetails,
+  PostImage,
+  PostContent,
+  ReadMore,
+} from "./style";
 
 const Insights = () => {
   return (
@@ -14,14 +27,40 @@ const Insights = () => {
       <Navbar />
       <HeroContainer>
         <HeroImage src={BLOG_IMAGE} />
-        <HeroText>Insights</HeroText>
+        <HeroText>Latest ESG Trends</HeroText>
       </HeroContainer>
-      <HeroContainer>
-        <HeroImage src={COMING_SOON} />
-        <HeroSubText>
-          Making some changes to improve your experience.
-        </HeroSubText>
-      </HeroContainer>
+      <PostSection>
+        <PostSectionTitle>Latest Stories & Insights</PostSectionTitle>
+        <SearchContainer>
+          <input type="text" placeholder="Search by Post Title..." />
+          <AiOutlineFileSearch />
+        </SearchContainer>
+        <PostContainer>
+          <PostCard>
+            <PostImage src={BLOG_IMAGE} />
+            <PostDetails>
+              <div>
+                <AiFillCalendar /> 12th May 2021
+              </div>
+              <div>
+                <AiFillClockCircle /> 5 mins read
+              </div>
+            </PostDetails>
+            <PostTitle>
+              ESG Investing: A Brief History of the Pussy Flowing Juices
+            </PostTitle>
+            <PostContent>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              tempore ad provident in iusto possimus, commodi optio, beatae
+              dolore nesciunt sapiente cum quisquam unde quas eius? Dolorum
+              quasi harum quas.
+            </PostContent>
+            <ReadMore>
+              <p>Read More</p> <AiOutlineArrowRight />
+            </ReadMore>
+          </PostCard>
+        </PostContainer>
+      </PostSection>
       <Footer />
     </>
   );
