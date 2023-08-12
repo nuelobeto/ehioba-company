@@ -13,6 +13,7 @@ import useAuth from "../../store/useAuth";
 import { useEffect, useState } from "react";
 import { RegisterT } from "../../types/types";
 import { toast } from "react-toastify";
+import { FaSpinner } from "react-icons/fa";
 
 const Register = () => {
   const { register, user, loading } = useAuth((state) => state);
@@ -85,7 +86,9 @@ const Register = () => {
               }
             />
           </FormGroup>
-          <SubmitBtn>{!loading ? "Sign Up" : "Loading..."}</SubmitBtn>
+          <SubmitBtn>
+            {!loading ? "Sign Up" : <FaSpinner className="spinner" />}
+          </SubmitBtn>
         </AuthBody>
 
         <AuthFooter>

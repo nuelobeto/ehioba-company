@@ -25,4 +25,14 @@ export type PostT = {
   category: string;
   content: string;
   image: string;
+  author: string;
+  date: string;
+};
+
+export type AddPostT = {
+  title: string;
+  category: string;
+  content: string;
+  image: string;
+  author: string;
 };

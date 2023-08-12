@@ -16,3 +16,6 @@ export const INSIGHTS_IMAGE = "assets/images/insights.jpg";
 export const COMING_SOON = "assets/images/coming-soon.jpg";
 export const WHO_WE_ARE = "assets/images/who-we-are1.jpg";
 export const TEAM = "assets/images/team.jpeg";
+export const POSTS_IMG = "assets/images/posts.webp";
+export const INSIGHTS_IMG = "assets/images/insights.webp";
+export const BLOG_IMG = "assets/images/blog.webp";

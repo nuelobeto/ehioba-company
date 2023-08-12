@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BASE_URL } from "../config/baseUrl";
-import { PostT } from "../types/types";
+import { AddPostT } from "../types/types";
 import { config } from "../config/headers";
 
 const getPosts = async (token: string) => {
@@ -9,20 +9,34 @@ const getPosts = async (token: string) => {
   return response.data;
 };
 
-const addPost = async (payload: PostT, token: string) => {
+const addPost = async (payload: AddPostT, token: string) => {
+  const formData = new FormData();
+  formData.append("title", payload.title);
+  formData.append("category", payload.category);
+  formData.append("content", payload.content);
+  formData.append("image", payload.image);
+  formData.append("author", payload.author);
+
   const response = await axios.post(
     `${BASE_URL}/addPost`,
-    payload,
+    formData,
     config(token)
   );
 
   return response.data;
 };
 
-const updatePost = async (payload: PostT, postId: string, token: string) => {
+const updatePost = async (payload: AddPostT, postId: string, token: string) => {
+  const formData = new FormData();
+  formData.append("title", payload.title);
+  formData.append("category", payload.category);
+  formData.append("content", payload.content);
+  formData.append("image", payload.image);
+  formData.append("author", payload.author);
+
   const response = await axios.put(
     `${BASE_URL}/updatePost/${postId}`,
-    payload,
+    formData,
     config(token)
   );
 
@@ -31,7 +45,7 @@ const updatePost = async (payload: PostT, postId: string, token: string) => {
 
 const deletePost = async (postId: string, token: string) => {
   const response = await axios.delete(
-    `${BASE_URL}/updatePost/${postId}`,
+    `${BASE_URL}/deletePost/${postId}`,
     config(token)
   );
 

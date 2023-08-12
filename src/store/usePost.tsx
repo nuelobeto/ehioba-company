@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { PostT } from "../types/types";
+import { PostT, AddPostT } from "../types/types";
 import { toast } from "react-toastify";
 import postServices from "../services/postServices";
 
@@ -11,8 +11,8 @@ type PostStateT = {
   deletingPost: boolean;
   error: "";
   getPosts: (token: string) => void;
-  addPost: (payload: PostT, token: string) => void;
-  updatePost: (payload: PostT, postId: string, token: string) => void;
+  addPost: (payload: AddPostT, token: string) => void;
+  updatePost: (payload: AddPostT, postId: string, token: string) => void;
   deletePost: (postId: string, token: string) => void;
 };
 
@@ -36,22 +36,36 @@ const usePost = create<PostStateT>((set) => ({
     }
   },
 
-  addPost: async (payload: PostT, token: string) => {
+  addPost: async (payload: AddPostT, token: string) => {
     set((state) => ({ addingPost: (state.addingPost = true) }));
     try {
-      await postServices.addPost(payload, token);
+      const post = await postServices.addPost(payload, token);
       set((state) => ({ addingPost: (state.addingPost = false) }));
+      set((state) => ({ posts: (state.posts = [post, ...state.posts]) }));
+      toast.success("New Post Added!");
     } catch (error: any) {
       set((state) => ({ addingPost: (state.addingPost = false) }));
       toast.error(error.response.data.message);
     }
   },
 
-  updatePost: async (payload: PostT, postId: string, token: string) => {
+  updatePost: async (payload: AddPostT, postId: string, token: string) => {
     set((state) => ({ updatingPost: (state.updatingPost = true) }));
     try {
-      await postServices.updatePost(payload, postId, token);
+      const updatedPost = await postServices.updatePost(payload, postId, token);
       set((state) => ({ updatingPost: (state.updatingPost = false) }));
+      const postIndex = usePost
+        .getState()
+        .posts.findIndex((post) => post.id === postId);
+      if (postIndex !== -1) {
+        const updatedPosts = [...usePost.getState().posts];
+        updatedPosts[postIndex] = {
+          ...updatedPosts[postIndex],
+          ...updatedPost,
+        };
+        set((state) => ({ posts: (state.posts = updatedPosts) }));
+        toast.success("Your Post has been Updated!");
+      }
     } catch (error: any) {
       set((state) => ({ updatingPost: (state.updatingPost = false) }));
       toast.error(error.response.data.message);
@@ -63,6 +77,9 @@ const usePost = create<PostStateT>((set) => ({
     try {
       await postServices.deletePost(postId, token);
       set((state) => ({ deletingPost: (state.deletingPost = false) }));
+      set((state) => ({
+        posts: (state.posts = state.posts.filter((post) => post.id !== postId)),
+      }));
     } catch (error: any) {
       set((state) => ({ deletingPost: (state.deletingPost = false) }));
       toast.error(error.response.data.message);

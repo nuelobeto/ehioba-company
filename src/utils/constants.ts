@@ -93,3 +93,29 @@ export const ServicesData: CarouselDataType[] = [
       "We maintain relationships with clients to provide ongoing support, assistance and continuously improve their ESG performance and impact by identifying new opportunities, trends and areas of improvement",
   },
 ];
+
+export const tableHeadData = [
+  "Id",
+  "Title",
+  "Category",
+  "Author",
+  "Date",
+  "Action",
+];
+
+export const tableBodyData = [
+  {
+    id: "64d3993ded3fca7d0220bb40",
+    author: "Ehioba",
+    title: "India's Green Credit Programme: What It Is & How To Prepare",
+    category: "Blog",
+    date: "July 22, 2023",
+  },
+  {
+    id: "64d3993ded3fca7d0220bb40",
+    author: "Ehioba",
+    title: "India's Green Credit Programme: What It Is & How To Prepare",
+    category: "Blog",
+    date: "July 22, 2023",
+  },
+];
