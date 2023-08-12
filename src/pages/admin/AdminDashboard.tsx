@@ -126,7 +126,11 @@ const AdminDashboard = () => {
         </div>
       </Main>
       {openTextEditor && (
-        <TextEditor setOpenTextEditor={setOpenTextEditor} post={post} />
+        <TextEditor
+          setOpenTextEditor={setOpenTextEditor}
+          post={post}
+          setPost={setPost}
+        />
       )}
     </>
   );
