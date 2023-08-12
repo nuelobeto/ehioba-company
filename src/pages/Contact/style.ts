@@ -54,6 +54,9 @@ export const ContactInput = styled.div`
       border: 0.15rem solid ${COLORS.lightGreen};
       transition: 0.3s ease-in-out;
     }
+    &::placeholder {
+      color: ${COLORS.gray};
+    }
   }
 `;
 

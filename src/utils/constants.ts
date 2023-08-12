@@ -127,10 +127,7 @@ export const SupportLinks: FooterLinksType[] = [
     text: "FAQ",
     link: "/support",
   },
-  {
-    text: "Cookie Policy",
-    link: "/support",
-  },
+
   {
     text: "Privacy Policy",
     link: "/support",
@@ -138,5 +135,9 @@ export const SupportLinks: FooterLinksType[] = [
   {
     text: "Terms of Use",
     link: "/support",
+  },
+  {
+    text: "Admin",
+    link: "/admin",
   },
 ];

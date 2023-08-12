@@ -30,7 +30,9 @@ const Footer = () => {
         <FooterSection>
           <h3>Company</h3>
           {CompanyLinks.map((link, index) => (
-            <p key={index}>{link.text}</p>
+            <p onClick={() => navigate(`${link.link}`)} key={index}>
+              {link.text}
+            </p>
           ))}
         </FooterSection>
         <FooterSection>
