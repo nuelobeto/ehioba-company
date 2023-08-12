@@ -104,6 +104,10 @@ export const SubmitBtn = styled.button`
   font-weight: 600;
   font-size: 15px;
 
+  @media (max-width: 420px) {
+    margin-top: 2rem;
+  }
+
   &:hover {
     background-color: ${COLORS.lightGreen};
   }
