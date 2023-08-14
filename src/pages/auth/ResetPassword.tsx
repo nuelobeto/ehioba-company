@@ -4,6 +4,7 @@ import {
   AuthFooter,
   AuthForm,
   AuthHeader,
+  AuthNav,
   AuthWrapper,
   FormGroup,
   SubmitBtn,
@@ -14,6 +15,7 @@ import useAuth from "../../store/useAuth";
 import { toast } from "react-toastify";
 import { ResetPasswordT } from "../../types/types";
 import { FaSpinner } from "react-icons/fa";
+import { BiArrowBack } from "react-icons/bi";
 
 const ResetPassword = () => {
   const { resetPassword, user, loading } = useAuth((state) => state);
@@ -49,6 +51,12 @@ const ResetPassword = () => {
 
   return (
     <AuthWrapper>
+      <AuthNav>
+        <Link to={ROUTES.home}>
+          <BiArrowBack />
+          Back to Website
+        </Link>
+      </AuthNav>
       <AuthForm onSubmit={handleResetPassword}>
         <AuthHeader>
           <h1>Update Password</h1>

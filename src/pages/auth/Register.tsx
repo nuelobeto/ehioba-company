@@ -4,6 +4,7 @@ import {
   AuthFooter,
   AuthForm,
   AuthHeader,
+  AuthNav,
   AuthWrapper,
   FormGroup,
   SubmitBtn,
@@ -14,6 +15,7 @@ import { useEffect, useState } from "react";
 import { RegisterT } from "../../types/types";
 import { toast } from "react-toastify";
 import { FaSpinner } from "react-icons/fa";
+import { BiArrowBack } from "react-icons/bi";
 
 const Register = () => {
   const { register, user, loading } = useAuth((state) => state);
@@ -49,6 +51,12 @@ const Register = () => {
 
   return (
     <AuthWrapper>
+      <AuthNav>
+        <Link to={ROUTES.home}>
+          <BiArrowBack />
+          Back to Website
+        </Link>
+      </AuthNav>
       <AuthForm onSubmit={handleRegister}>
         <AuthHeader>
           <h1>Sign Up</h1>

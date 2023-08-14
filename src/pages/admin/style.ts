@@ -7,6 +7,58 @@ export const Main = styled.main`
   margin: 10vh 0 0;
 `;
 
+export const SearchXFilter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 5px;
+  margin: 0.5rem 0;
+`;
+
+export const SearchBar = styled.form`
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  flex: 1;
+  position: relative;
+
+  input {
+    outline: none;
+    border: 1px solid ${COLORS.mediumGray};
+    background-color: ${COLORS.veryLightGray};
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    padding-left: 3rem;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  svg {
+    position: absolute;
+    left: 1rem;
+    font-size: 22px;
+    color: gray;
+  }
+`;
+
+export const Filter = styled.div`
+  select {
+    outline: none;
+    border: 1px solid ${COLORS.mediumGray};
+    background-color: ${COLORS.veryLightGray};
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+    padding-left: 1rem;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+  }
+`;
+
 export const Stats = styled.div`
   display: flex;
   align-items: center;
@@ -127,4 +179,13 @@ export const ActionBtn = styled.button`
       background-color: ${COLORS.darkDanger};
     }
   }
+`;
+
+export const NoTableData = styled.div`
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
 `;

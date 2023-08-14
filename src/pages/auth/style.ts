@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../utils/colors";
+import { btn } from "../../utils/btn";
 
 export const AuthWrapper = styled.div`
   width: 100vw;
@@ -9,6 +10,39 @@ export const AuthWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
+  position: relative;
+`;
+
+export const AuthNav = styled.nav`
+  max-width: 400px;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  position: absolute;
+  top: 0;
+
+  a {
+    width: fit-content;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: ${btn.xs};
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${COLORS.darkGreen};
+      border: 1px solid ${COLORS.darkGreen};
+    }
+
+    svg {
+      font-size: 25px;
+    }
+  }
 `;
 
 export const AuthForm = styled.form`
@@ -39,7 +73,6 @@ export const AuthHeader = styled.div`
 `;
 
 export const AuthBody = styled.div`
-  max-width: 330px;
   width: 100%;
   margin: auto;
   display: flex;
