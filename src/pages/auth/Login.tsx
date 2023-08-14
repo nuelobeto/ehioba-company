@@ -4,6 +4,7 @@ import {
   AuthFooter,
   AuthForm,
   AuthHeader,
+  AuthNav,
   AuthWrapper,
   FormGroup,
   SubmitBtn,
@@ -13,6 +14,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../store/useAuth";
 import { LoginT } from "../../types/types";
 import { FaSpinner } from "react-icons/fa";
+import { BiArrowBack } from "react-icons/bi";
 
 const Login = () => {
   const { login, user, loading } = useAuth((state) => state);
@@ -42,6 +44,12 @@ const Login = () => {
 
   return (
     <AuthWrapper>
+      <AuthNav>
+        <Link to={ROUTES.home}>
+          <BiArrowBack />
+          Back to Website
+        </Link>
+      </AuthNav>
       <AuthForm onSubmit={handleLogin}>
         <AuthHeader>
           <h1>Log In</h1>
