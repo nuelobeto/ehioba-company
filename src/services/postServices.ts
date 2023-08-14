@@ -3,8 +3,8 @@ import { BASE_URL } from "../config/baseUrl";
 import { AddPostT } from "../types/types";
 import { config } from "../config/headers";
 
-const getPosts = async (token: string) => {
-  const response = await axios.get(`${BASE_URL}/getPosts`, config(token));
+const getPosts = async () => {
+  const response = await axios.get(`${BASE_URL}/getPosts`);
 
   return response.data;
 };

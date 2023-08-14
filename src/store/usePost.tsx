@@ -10,7 +10,7 @@ type PostStateT = {
   updatingPost: boolean;
   deletingPost: boolean;
   error: "";
-  getPosts: (token: string) => void;
+  getPosts: () => void;
   addPost: (payload: AddPostT, token: string) => void;
   updatePost: (payload: AddPostT, postId: string, token: string) => void;
   deletePost: (postId: string, token: string) => void;
@@ -24,10 +24,10 @@ const usePost = create<PostStateT>((set) => ({
   deletingPost: false,
   error: "",
 
-  getPosts: async (token: string) => {
+  getPosts: async () => {
     set((state) => ({ gettingPosts: (state.gettingPosts = true) }));
     try {
-      const posts = await postServices.getPosts(token);
+      const posts = await postServices.getPosts();
       set((state) => ({ gettingPosts: (state.gettingPosts = false) }));
       set((state) => ({ posts: (state.posts = posts) }));
     } catch (error: any) {
