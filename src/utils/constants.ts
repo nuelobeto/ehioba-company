@@ -1,3 +1,4 @@
+import { ROUTES } from "../app-navigation/routes";
 import {
   APPROACH_IMAGE_1,
   APPROACH_IMAGE_2,
@@ -106,38 +107,38 @@ export const tableHeadData = [
 export const CompanyLinks: FooterLinksType[] = [
   {
     text: "About",
-    link: "/about",
+    link: `${ROUTES.about}`,
   },
   {
     text: "Contact",
-    link: "/contact",
+    link: `${ROUTES.contact}`,
   },
   {
     text: "Insights",
-    link: "/insights",
+    link: `${ROUTES.insights}`,
   },
   {
     text: "Blog",
-    link: "/blog",
+    link: `${ROUTES.blog}`,
   },
 ];
 
 export const SupportLinks: FooterLinksType[] = [
   {
     text: "FAQ",
-    link: "/support",
+    link: `${ROUTES.support}`,
   },
 
   {
     text: "Privacy Policy",
-    link: "/support",
+    link: `${ROUTES.support}`,
   },
   {
     text: "Terms of Use",
-    link: "/support",
+    link: `${ROUTES.support}`,
   },
   {
     text: "Admin",
-    link: "/admin",
+    link: `${ROUTES.admin}`,
   },
 ];
