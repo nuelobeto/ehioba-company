@@ -74,9 +74,7 @@ const AdminDashboard = () => {
   }, [user]);
 
   useEffect(() => {
-    if (posts.length !== 0) {
-      setFilteredPosts(posts);
-    }
+    setFilteredPosts(posts);
   }, [posts]);
 
   useEffect(() => {
