@@ -4,10 +4,16 @@ import Navbar from "../../components/Navbar/Navbar";
 import { HeroContainer, HeroImage, HeroText } from "../About/style";
 import PostsWrapper from "../../components/post-section/PostsWrapper";
 import usePost from "../../store/usePost";
+import { useEffect, useState } from "react";
+import { PostT } from "../../types/types";
 
 const Insights = () => {
   const { posts } = usePost((state) => state);
-  const insights = posts.filter((post) => post.category === "Insight");
+  const [insights, setInsights] = useState<PostT[]>([]);
+
+  useEffect(() => {
+    setInsights(posts.filter((post) => post.category === "Insight"));
+  }, [posts]);
 
   return (
     <>
