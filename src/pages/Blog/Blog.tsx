@@ -1,14 +1,14 @@
-import { COMING_SOON, CONTACT_IMAGE } from "../../assets/images";
+import { CONTACT_IMAGE } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import {
-  HeroContainer,
-  HeroImage,
-  HeroSubText,
-  HeroText,
-} from "../About/style";
+import PostsWrapper from "../../components/post-section/PostsWrapper";
+import usePost from "../../store/usePost";
+import { HeroContainer, HeroImage, HeroText } from "../About/style";
 
 const Blog = () => {
+  const { posts } = usePost((state) => state);
+  const blogs = posts.filter((post) => post.category === "Blog");
+
   return (
     <>
       <Navbar />
@@ -16,12 +16,7 @@ const Blog = () => {
         <HeroImage src={CONTACT_IMAGE} />
         <HeroText>Blogs</HeroText>
       </HeroContainer>
-      <HeroContainer>
-        <HeroImage src={COMING_SOON} />
-        <HeroSubText>
-          Making some changes to improve your experience.
-        </HeroSubText>
-      </HeroContainer>
+      <PostsWrapper posts={blogs} />
       <Footer />
     </>
   );
