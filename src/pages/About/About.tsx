@@ -1,4 +1,4 @@
-import { ABOUT_IMAGE, WHO_WE_ARE, TEAM } from "../../assets/images";
+import { ABOUT_IMAGE, WHO_WE_ARE, EHIOBA_IMG } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import { Container } from "../../components/Navbar/styles";
@@ -74,7 +74,7 @@ const About = () => {
             </div>
           </SectionText>
           <OverviewImage>
-            <img src={TEAM} alt="overview" />
+            <img src={EHIOBA_IMG} alt="ehioba" />
           </OverviewImage>
         </SectionContainer>
       </Section>
