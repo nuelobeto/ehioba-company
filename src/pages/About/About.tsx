@@ -56,11 +56,38 @@ const About = () => {
         <SectionContainer style={Container} $display={"flex"}>
           <SectionText>
             <SectionTitle>Meet the Team</SectionTitle>
-            <div style={{ height: "10rem" }}></div>
+            <div>
+              <h4>FOUNDER</h4>
+              <h2> Osayomwanbor Wilfred Ehioba </h2>
+              <h4 style={{ marginTop: "2rem" }}>SHORT BIO</h4>
+              <p>
+                Wilfred is an entrepreneur and a member of the International
+                Association of Energy Economies. He has a Master of Arts in
+                politics from the University of Lincoln. Currently, he is a
+                youth advisor to the European Union Delegation to Nigeria and
+                ECOWAS. In 2021, he was invited by the French government as part
+                of a delegation from Nigeria to participate in the New Africa
+                France Summit in Montpellier, France. Wilfred has a sound
+                background in ESG, climate and energy policies, and data
+                analysis.
+              </p>
+            </div>
           </SectionText>
           <OverviewImage>
             <img src={TEAM} alt="overview" />
           </OverviewImage>
+        </SectionContainer>
+      </Section>
+      <Section $bg={`${COLORS.bgGreen}`}>
+        <SectionContainer style={Container}>
+          <DarkSectionTitle>Summary</DarkSectionTitle>
+          <SectionText style={{ textAlign: "center" }}>
+            <p>
+              Join us in building a sustainable future and achieving net zero
+              emissions. Let us help you develop and implement a comprehensive
+              sustainability strategy today.
+            </p>
+          </SectionText>
         </SectionContainer>
       </Section>
       <Footer />

@@ -8,4 +8,5 @@ export const ROUTES = {
   register: "/register",
   login: "/login",
   reset_password: "/reset-password",
+  support: "/support",
 };
