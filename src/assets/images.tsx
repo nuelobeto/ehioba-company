@@ -19,6 +19,7 @@ import PostImg from "./images/posts.webp";
 import InsightImg2 from "./images/insights.webp";
 import BlogImg2 from "./images/blog.webp";
 import SupportImg from "./images/support.jpg";
+import EhiobaImg from "./images/ehioba.jpg";
 
 export const LOGO = Logo;
 export const SLIDER_IMAGE_1 = SliderImg1;
@@ -42,3 +43,4 @@ export const POSTS_IMG = PostImg;
 export const INSIGHTS_IMG = InsightImg2;
 export const BLOG_IMG = BlogImg2;
 export const SUPPORT_IMG = SupportImg;
+export const EHIOBA_IMG = EhiobaImg;

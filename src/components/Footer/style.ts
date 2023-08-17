@@ -40,10 +40,10 @@ export const FooterSection = styled.div`
   }
 `;
 export const Input = styled.input`
-  padding: 1rem 2rem;
+  padding: 1rem;
 `;
 export const Button = styled.button`
-  padding: 1rem 2rem;
+  padding: 1rem 2em;
   margin: 0.5rem 0;
   font-size: 1rem;
   font-weight: 400;

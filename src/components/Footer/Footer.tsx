@@ -63,8 +63,8 @@ const Footer = () => {
         <FooterSection>
           <h3>Newsletter</h3>
           <p>Subscribe to our newsletter</p>
-          <Input type="text" placeholder="Enter your email" />
-          <Button>JOIN</Button>
+          <Input type="email" placeholder="Enter your email" required />
+          <Button disabled>JOIN</Button>
         </FooterSection>
       </Container>
       <CopyRight>

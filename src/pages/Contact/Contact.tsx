@@ -76,6 +76,7 @@ const Contact = () => {
               placeholder="John"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              required
             />
           </ContactInput>
           <ContactInput>
@@ -87,6 +88,7 @@ const Contact = () => {
               placeholder="Doe"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              required
             />
           </ContactInput>
           <ContactInput>
@@ -98,6 +100,7 @@ const Contact = () => {
               placeholder="Example Company"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
+              required
             />
           </ContactInput>
           <ContactInput>
@@ -109,6 +112,7 @@ const Contact = () => {
               placeholder="jon.doe@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </ContactInput>
           <ContactInput className="message">
@@ -120,6 +124,7 @@ const Contact = () => {
               rows={5}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </ContactInput>
           <ContactButton>SEND</ContactButton>
