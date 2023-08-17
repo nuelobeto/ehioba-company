@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { SUPPORT_IMG } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -11,6 +12,14 @@ import {
 } from "../Home/style";
 
 const Support = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
       <Navbar />

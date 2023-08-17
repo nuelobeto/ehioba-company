@@ -69,9 +69,5 @@ export const NoData = styled.div`
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-  }
+  padding: 0 0 2rem;
 `;

@@ -67,6 +67,14 @@ const AdminDashboard = () => {
     setFilteredPosts(searchPosts(posts, searchQuery));
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   useEffect(() => {
     if (!user) {
       navigate(ROUTES.login);

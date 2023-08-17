@@ -11,6 +11,14 @@ const Insights = () => {
   const { posts } = usePost((state) => state);
   const [insights, setInsights] = useState<PostT[]>([]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   useEffect(() => {
     setInsights(posts.filter((post) => post.category === "Insight"));
   }, [posts]);

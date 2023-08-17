@@ -9,4 +9,5 @@ export const ROUTES = {
   login: "/login",
   reset_password: "/reset-password",
   support: "/support",
+  post_details: "/post",
 };

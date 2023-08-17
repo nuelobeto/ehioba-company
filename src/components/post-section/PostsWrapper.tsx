@@ -54,12 +54,13 @@ const PostsWrapper = ({ posts }: PostSectionProps) => {
         <AiOutlineFileSearch onClick={handleSearch} />
       </SearchContainer>
       <PostContainer>
-        {filteredPosts.length === 0 ? (
-          <NoData>There are no Posts at the moment</NoData>
-        ) : (
-          filteredPosts.map((post, index) => <Post key={index} post={post} />)
-        )}
+        {filteredPosts.map((post, index) => (
+          <Post key={index} post={post} />
+        ))}
       </PostContainer>
+      {filteredPosts.length === 0 && (
+        <NoData>There are no Posts at the moment</NoData>
+      )}
     </PostSection>
   );
 };
