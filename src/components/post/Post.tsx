@@ -14,14 +14,18 @@ import {
 import HtmlParser from "../html-parser/HtmlParser";
 import { PostT } from "../../types/types";
 import { formatStrDate } from "../../utils/date";
+import { useNavigate } from "react-router";
+import { ROUTES } from "../../app-navigation/routes";
 
 type PostProps = {
   post: PostT;
 };
 
 const Post = ({ post }: PostProps) => {
+  const navigate = useNavigate();
+
   return (
-    <PostCard>
+    <PostCard onClick={() => navigate(`${ROUTES.post_details}/${post.id}`)}>
       <PostImage src={post.image} />
       <PostDetails>
         <div>

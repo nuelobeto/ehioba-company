@@ -10,6 +10,7 @@ import Register from "../pages/auth/Register";
 import Login from "../pages/auth/Login";
 import ResetPassword from "../pages/auth/ResetPassword";
 import Support from "../pages/Support/Support";
+import PostDetails from "../pages/post-details/PostDetails";
 
 const AppRoutes = () => {
   return (
@@ -25,6 +26,10 @@ const AppRoutes = () => {
       <Route path={ROUTES.reset_password} element={<ResetPassword />} />
       <Route path={ROUTES.admin} element={<AdminDashboard />} />
       <Route path={ROUTES.support} element={<Support />} />
+      <Route
+        path={`${ROUTES.post_details}/:postId`}
+        element={<PostDetails />}
+      />
     </Routes>
   );
 };

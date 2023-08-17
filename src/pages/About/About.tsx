@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ABOUT_IMAGE, WHO_WE_ARE, TEAM } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -13,6 +14,14 @@ import {
 import { DarkSectionTitle, HeroContainer, HeroImage, HeroText } from "./style";
 
 const About = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
       <Navbar />
