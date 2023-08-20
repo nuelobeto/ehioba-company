@@ -12,12 +12,14 @@ import {
 } from "./styles";
 import { navLinks } from "../../utils/constants";
 import SideNav from "../SideNav/SideNav";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { COLORS } from "../../utils/colors";
 
 const Navbar = () => {
   const [viewportWidth, setViewPortWidth] = useState(window.innerWidth);
   const [openSideNav, setOpenSideNav] = useState(false);
   const [scrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,6 +27,8 @@ const Navbar = () => {
     };
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.onscroll = function () {
@@ -36,8 +40,6 @@ const Navbar = () => {
       }
     };
   }, []);
-
-  const navigate = useNavigate();
 
   return (
     <>
@@ -52,12 +54,22 @@ const Navbar = () => {
                 <OpenBtn
                   $scrolled={scrolled}
                   onClick={() => setOpenSideNav(!openSideNav)}
+                  style={{
+                    color: `${
+                      pathname.includes("post-details") && COLORS.black
+                    }`,
+                  }}
                 />
               )}
               {openSideNav && (
                 <CloseBtn
                   $scrolled={scrolled}
                   onClick={() => setOpenSideNav(!openSideNav)}
+                  style={{
+                    color: `${
+                      pathname.includes("post-details") && COLORS.black
+                    }`,
+                  }}
                 />
               )}
               <SideNav
@@ -68,7 +80,15 @@ const Navbar = () => {
           ) : (
             <NavLinks>
               {navLinks.map((link, index) => (
-                <NavLink to={`/${link}`} key={index}>
+                <NavLink
+                  to={`/${link}`}
+                  key={index}
+                  style={{
+                    color: `${
+                      pathname.includes("post-details") && COLORS.black
+                    }`,
+                  }}
+                >
                   {link}
                 </NavLink>
               ))}

@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import Navbar from "../../components/Navbar/Navbar";
-import { HeroContainer, HeroImage, HeroText, PostContent } from "./style";
+import { PostTitle, PostContent, PostContainer, PostImage } from "./style";
 import usePost from "../../store/usePost";
 import Footer from "../../components/Footer/Footer";
 import HtmlParser from "../../components/html-parser/HtmlParser";
@@ -23,16 +23,13 @@ const PostDetails = () => {
   return (
     <>
       <Navbar />
-      <HeroContainer>
-        <HeroImage src={post?.image} />
-        <HeroText>
-          {post?.title} Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Illum, porro!
-        </HeroText>
-      </HeroContainer>
-      <PostContent>
-        <HtmlParser htmlString={post ? post?.content : ""} />
-      </PostContent>
+      <PostContainer>
+        <PostTitle>{post?.title}</PostTitle>
+        <PostImage src={post?.image} />
+        <PostContent>
+          <HtmlParser htmlString={post ? post?.content : ""} />
+        </PostContent>
+      </PostContainer>
       <Footer />
     </>
   );
