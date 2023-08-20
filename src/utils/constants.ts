@@ -50,9 +50,9 @@ export const CardsData: CardDataType[] = [
       "We specialize in designing tailored ESG strategies that align with our clients' distinct goals and values. We identify and prioritize ESG issues, set goals, and develop a road map for implementation.",
   },
   {
-    mainText: "Analysis and Strategic Development",
+    mainText: "Sustainable Finance Guide",
     subText:
-      "Based on our assessment,We provide a comprehensive analysis of your company's ESG performance and develop a strategy to improve your ESG performance.",
+      "We provide expert guidance to our clients in accessing sustainable project funding and financial support for the implementation of ESG strategies.",
   },
 ];
 
@@ -92,6 +92,29 @@ export const ServicesData: CarouselDataType[] = [
     mainText: "Support and Continuous Improvement",
     subText:
       "We maintain relationships with clients to provide ongoing support, assistance and continuously improve their ESG performance and impact by identifying new opportunities, trends and areas of improvement",
+  },
+];
+
+export const SolutionsCardsData: CardDataType[] = [
+  {
+    mainText: "VALUE",
+    subText:
+      "The satisfaction of our clients is our major priority. We take into consideration the needs of our clients and provide quality service that exceeds their expectations.",
+  },
+  {
+    mainText: "CONVENIENCE",
+    subText:
+      "We render our services to clients with a hassle free and streamlined experience that meet the needs and saves time and effort.",
+  },
+  {
+    mainText: "EXPERTISE AND INNOVATION",
+    subText:
+      "We are professionals and innovative, and we possess the required skills and training to understand the needs of our clients and deliver excellent service.",
+  },
+  {
+    mainText: "AFFORDABLE",
+    subText:
+      " Our services are affordable and quality, and we are accessible to our customers.",
   },
 ];
 

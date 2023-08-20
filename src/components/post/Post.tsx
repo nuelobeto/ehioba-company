@@ -23,6 +23,7 @@ type PostProps = {
 
 const Post = ({ post }: PostProps) => {
   const navigate = useNavigate();
+  const readingTime = Math.ceil(post.content.length / 200);
 
   return (
     <PostCard onClick={() => navigate(`${ROUTES.post_details}/${post.id}`)}>
@@ -32,7 +33,7 @@ const Post = ({ post }: PostProps) => {
           <AiFillCalendar /> {formatStrDate(post.date)}
         </div>
         <div>
-          <AiFillClockCircle /> 5 mins read
+          <AiFillClockCircle /> {readingTime} min{readingTime > 1 && "s"} read
         </div>
       </PostDetails>
       <PostTitle>{post.title}</PostTitle>

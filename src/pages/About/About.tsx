@@ -1,5 +1,10 @@
 import { useEffect } from "react";
-import { ABOUT_IMAGE, WHO_WE_ARE, EHIOBA_IMG } from "../../assets/images";
+import {
+  ABOUT_IMAGE,
+  WHO_WE_ARE,
+  EHIOBA_IMG,
+  PARTNERS_IMG,
+} from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import { Container } from "../../components/Navbar/styles";
@@ -61,6 +66,7 @@ const About = () => {
           </SectionText>
         </SectionContainer>
       </Section>
+
       <Section>
         <SectionContainer style={Container} $display={"flex"}>
           <SectionText>
@@ -97,6 +103,28 @@ const About = () => {
               sustainability strategy today.
             </p>
           </SectionText>
+        </SectionContainer>
+      </Section>
+      <Section>
+        <SectionContainer style={Container} $display={"flex"}>
+          <SectionText>
+            <SectionTitle>Key Partnership Benefits</SectionTitle>
+            <div>
+              <h4>OPERATIONAL RESILIENCE</h4>
+              <p>
+                Mitigate risk and adapt to changing regulatory requirements,
+                ensuring long-term operational stability
+              </p>
+              <h4 style={{ marginTop: "2rem" }}>ENHANCED BRAND REPUTATION</h4>
+              <p>
+                Establish your brand as a sustainable leader, gaining a
+                competitive edge in the market.
+              </p>
+            </div>
+          </SectionText>
+          <OverviewImage>
+            <img src={PARTNERS_IMG} alt="partnership" />
+          </OverviewImage>
         </SectionContainer>
       </Section>
       <Footer />

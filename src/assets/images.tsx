@@ -20,6 +20,7 @@ import BlogImg2 from "./images/blog.webp";
 import SupportImg from "./images/support.jpg";
 import EhiobaImg from "./images/ehioba.jpg";
 import TwitterX from "./images/twitterx.jpg";
+import Partners from "./images/partners.jpg";
 
 export const LOGO =
   "https://res.cloudinary.com/dk9bt9lkn/image/upload/v1692541421/ehioba/Ehioba_green_3_hiylnr.png";
@@ -46,3 +47,4 @@ export const BLOG_IMG = BlogImg2;
 export const SUPPORT_IMG = SupportImg;
 export const EHIOBA_IMG = EhiobaImg;
 export const TwitterXImg = TwitterX;
+export const PARTNERS_IMG = Partners;

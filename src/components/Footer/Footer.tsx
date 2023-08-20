@@ -55,19 +55,20 @@ const Footer = () => {
             <a href="mailto:info@ehioba.com">
               <AiFillMail />
             </a>
-            <a
-              href="https://twitter.com/ehiobacom"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={TwitterXImg} alt="" />
-            </a>
+
             <a
               href="https://instagram.com/ehiobaco?igshid=MjEwN2IyYWYwYw=="
               target="_blank"
               rel="noreferrer"
             >
               <AiFillInstagram />
+            </a>
+            <a
+              href="https://twitter.com/ehiobacom"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={TwitterXImg} alt="" />
             </a>
           </Socials>
         </FooterSection>
