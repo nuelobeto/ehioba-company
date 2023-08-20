@@ -1,15 +1,11 @@
-import { Logo } from "../Navbar/styles";
-import { LOGO } from "../../assets/images";
-import {
-  AiFillLinkedin,
-  AiFillMail,
-  AiFillTwitterSquare,
-} from "react-icons/ai";
+import { LOGO, TwitterXImg } from "../../assets/images";
+import { AiFillLinkedin, AiFillMail, AiFillInstagram } from "react-icons/ai";
 import {
   Button,
   Container,
   CopyRight,
   FooterContainer,
+  FooterLogo,
   FooterSection,
   Input,
   Socials,
@@ -23,9 +19,9 @@ const Footer = () => {
     <FooterContainer>
       <Container>
         <FooterSection>
-          <Logo onClick={() => navigate("/home")}>
+          <FooterLogo onClick={() => navigate("/home")}>
             <img src={LOGO} alt="logo" />
-          </Logo>
+          </FooterLogo>
         </FooterSection>
         <FooterSection>
           <h3>Company</h3>
@@ -49,14 +45,29 @@ const Footer = () => {
           <p>London.EC2A 4NE.</p>
           <p>+44 7310 152929</p>
           <Socials>
-            <a href="https://www.linkedin.com/company/ehioba-company/">
+            <a
+              href="https://www.linkedin.com/company/ehioba-company/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <AiFillLinkedin />
             </a>
-            <a href="">
+            <a href="mailto:info@ehioba.com">
               <AiFillMail />
             </a>
-            <a href="https://twitter.com/ehiobacom">
-              <AiFillTwitterSquare />
+            <a
+              href="https://twitter.com/ehiobacom"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={TwitterXImg} alt="" />
+            </a>
+            <a
+              href="https://instagram.com/ehiobaco?igshid=MjEwN2IyYWYwYw=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillInstagram />
             </a>
           </Socials>
         </FooterSection>

@@ -19,6 +19,13 @@ export const Container = styled.div`
     flex-direction: column;
   }
 `;
+export const FooterLogo = styled.div`
+  width: 150px;
+
+  img {
+    width: 100%;
+  }
+`;
 export const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -59,15 +66,23 @@ export const Button = styled.button`
 `;
 export const Socials = styled.div`
   display: flex;
+  gap: 0.5rem;
   & svg {
     font-size: 2rem;
-    margin-right: 0.5rem;
     cursor: pointer;
     &:hover {
       color: ${COLORS.lightGreen};
     }
   }
+
+  img {
+    width: 31px;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
 `;
+
 export const CopyRight = styled.div`
   text-align: center;
   width: 100%;
