@@ -76,7 +76,8 @@ export const OverviewImage = styled.div`
 `;
 export const CardContainer = styled.div`
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   @media (max-width: 768px) {
@@ -106,6 +107,34 @@ export const Card = styled.div`
     }
   }
 `;
+
+export const SolutionsCard = styled.div`
+  padding: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+  background-color: ${COLORS.white};
+  font-weight: 400;
+  margin: 1rem;
+  width: 40%;
+  min-height: 15rem;
+  & > h3 {
+    line-height: 2rem;
+    margin: 1rem auto 0 auto;
+  }
+  & > p {
+    color: ${COLORS.textGray};
+    line-height: 1.5;
+    margin: 2rem 0;
+    @media (max-width: 768px) {
+      margin: 1rem 0;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+`;
+
 export const LinkButton = styled(Button)`
   background-color: ${COLORS.white};
   color: ${COLORS.darkGreen};

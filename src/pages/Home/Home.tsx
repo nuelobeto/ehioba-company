@@ -5,7 +5,11 @@ import { Container } from "../../components/Navbar/styles";
 import { OVERVIEW_IMAGE } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
-import { CardsData, ServicesData } from "../../utils/constants";
+import {
+  CardsData,
+  ServicesData,
+  SolutionsCardsData,
+} from "../../utils/constants";
 import {
   ApproachContainer,
   ApproachImage,
@@ -19,6 +23,7 @@ import {
   SectionContainer,
   SectionText,
   SectionTitle,
+  SolutionsCard,
 } from "./style";
 import { useEffect } from "react";
 
@@ -95,6 +100,19 @@ const Home = () => {
               </div>
             ))}
           </ApproachContainer>
+        </SectionContainer>
+      </Section>
+      <Section $bg={`${COLORS.lightGray}`}>
+        <SectionContainer style={Container}>
+          <SectionTitle>Our Solution</SectionTitle>
+          <CardContainer>
+            {SolutionsCardsData.map((card, index) => (
+              <SolutionsCard key={index}>
+                <h3>{card.mainText}</h3>
+                <p>{card.subText}</p>
+              </SolutionsCard>
+            ))}
+          </CardContainer>
         </SectionContainer>
       </Section>
       <Footer />
