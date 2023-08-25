@@ -1,6 +1,6 @@
 import { carouselData } from "../../utils/constants";
 import React, { useEffect, useState } from "react";
-import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+// import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import styled from "styled-components";
 import { COLORS } from "../../utils/colors";
 import { useNavigate } from "react-router-dom";
@@ -12,29 +12,29 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
 `;
-const Arrow = styled.div<{ $side?: string }>`
-  width: 3rem;
-  height: 3rem;
-  color: ${COLORS.white};
-  font-size: 1.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: ${(props) => props.$side === "left" && "1rem"};
-  right: ${(props) => props.$side === "right" && "1rem"};
-  margin: auto;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.5s ease;
-  &:hover {
-    background-color: ${COLORS.darkGreen};
-    opacity: 0.8;
-  }
-`;
+// const Arrow = styled.div<{ $side?: string }>`
+//   width: 3rem;
+//   height: 3rem;
+//   color: ${COLORS.white};
+//   font-size: 1.5rem;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: ${(props) => props.$side === "left" && "1rem"};
+//   right: ${(props) => props.$side === "right" && "1rem"};
+//   margin: auto;
+//   cursor: pointer;
+//   z-index: 1;
+//   transition: all 0.5s ease;
+//   &:hover {
+//     background-color: ${COLORS.darkGreen};
+//     opacity: 0.8;
+//   }
+// `;
 const Wrapper = styled.div<{ $slide: number }>`
   height: 100%;
   display: flex;
@@ -103,13 +103,13 @@ const Carousel = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const timeoutRef = React.useRef<any | null>(null);
   const [slideIndex, setSlideIndex] = useState<number>(0);
-  const handleClick = (direction: string) => {
-    if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : carouselData.length - 1);
-    } else {
-      setSlideIndex(slideIndex < carouselData.length - 1 ? slideIndex + 1 : 0);
-    }
-  };
+  // const handleClick = (direction: string) => {
+  //   if (direction === "left") {
+  //     setSlideIndex(slideIndex > 0 ? slideIndex - 1 : carouselData.length - 1);
+  //   } else {
+  //     setSlideIndex(slideIndex < carouselData.length - 1 ? slideIndex + 1 : 0);
+  //   }
+  // };
   const resetTimeout = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -133,9 +133,9 @@ const Carousel = () => {
 
   return (
     <Container>
-      <Arrow $side="left" onClick={() => handleClick("left")}>
+      {/* <Arrow $side="left" onClick={() => handleClick("left")}>
         <AiOutlineLeft />
-      </Arrow>
+      </Arrow> */}
       <Wrapper $slide={slideIndex}>
         {carouselData.map((slide, index) => (
           <Slide key={index}>
@@ -164,9 +164,9 @@ const Carousel = () => {
           </Slide>
         ))}
       </Wrapper>
-      <Arrow $side="right" onClick={() => handleClick("right")}>
+      {/* <Arrow $side="right" onClick={() => handleClick("right")}>
         <AiOutlineRight />
-      </Arrow>
+      </Arrow> */}
     </Container>
   );
 };
