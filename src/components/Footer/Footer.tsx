@@ -52,7 +52,7 @@ const Footer = () => {
             >
               <AiFillLinkedin />
             </a>
-            <a href="mailto:info@ehioba.com">
+            <a href="mailto:info@ehiobaco.com">
               <AiFillMail />
             </a>
 
