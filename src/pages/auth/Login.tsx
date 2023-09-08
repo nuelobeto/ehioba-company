@@ -15,6 +15,7 @@ import useAuth from "../../store/useAuth";
 import { LoginT } from "../../types/types";
 import { FaSpinner } from "react-icons/fa";
 import { BiArrowBack } from "react-icons/bi";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { login, user, loading } = useAuth((state) => state);
@@ -27,6 +28,11 @@ const Login = () => {
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (formData.email !== "ehioba@admin.com") {
+      toast.error("Invalid Credentials");
+      return;
+    }
 
     const payload: LoginT = {
       email: formData.email,
@@ -84,9 +90,9 @@ const Login = () => {
 
         <AuthFooter>
           <Link to={ROUTES.reset_password}>Forgot Password?</Link>
-          <p>
+          {/* <p>
             Don't have an account? <Link to={ROUTES.register}>Sign Up</Link>
-          </p>
+          </p> */}
         </AuthFooter>
       </AuthForm>
     </AuthWrapper>

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import {
   AuthBody,
-  AuthFooter,
+  // AuthFooter,
   AuthForm,
   AuthHeader,
   AuthNav,
@@ -29,6 +29,11 @@ const ResetPassword = () => {
 
   const handleResetPassword = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (formData.email !== "ehioba@admin.com") {
+      toast.error("Invalid Credentials");
+      return;
+    }
 
     if (formData.password !== formData.confirm_password) {
       toast.error("Passwords mismatch!");
@@ -101,11 +106,11 @@ const ResetPassword = () => {
           </SubmitBtn>
         </AuthBody>
 
-        <AuthFooter>
+        {/* <AuthFooter>
           <p>
             Don't have an account? <Link to={ROUTES.register}>Sign Up</Link>
           </p>
-        </AuthFooter>
+        </AuthFooter> */}
       </AuthForm>
     </AuthWrapper>
   );
