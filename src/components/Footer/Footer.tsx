@@ -43,7 +43,7 @@ const Footer = () => {
           <h3>Get in touch</h3>
           <p>86 - 90 Paul Street,</p>
           <p>London.EC2A 4NE.</p>
-          <p>+44 7310 152929</p>
+          <p>+447988521615</p>
           <Socials>
             <a
               href="https://www.linkedin.com/company/ehioba-company/"
@@ -52,7 +52,7 @@ const Footer = () => {
             >
               <AiFillLinkedin />
             </a>
-            <a href="mailto:info@ehiobaco.com">
+            <a href="mailto:info@ehioba.com">
               <AiFillMail />
             </a>
 
