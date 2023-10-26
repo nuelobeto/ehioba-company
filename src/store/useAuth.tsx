@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 type UserStateT = {
   user: null | UserT;
   loading: boolean;
-  error: "";
+  error: string;
   login: (payload: LoginT) => void;
   register: (payload: RegisterT) => void;
   resetPassword: (payload: ResetPasswordT) => void;
