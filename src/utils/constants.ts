@@ -50,7 +50,7 @@ export const CardsData: CardDataType[] = [
       "We specialize in designing tailored ESG strategies that align with our clients' distinct goals and values. We identify and prioritize ESG issues, set goals, and develop a road map for implementation.",
   },
   {
-    mainText: "Sustainable Finance Guide",
+    mainText: "Sustainable Finance Guide (Available Soon)",
     subText:
       "We provide expert guidance to our clients in accessing sustainable project funding and financial support for the implementation of ESG strategies.",
   },
