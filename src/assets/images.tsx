@@ -18,12 +18,13 @@ import PostImg from "./images/posts.webp";
 import InsightImg2 from "./images/insights.webp";
 import BlogImg2 from "./images/blog.webp";
 import SupportImg from "./images/support.jpg";
-import EhiobaImg from "./images/ehioba.jpg";
+import EhiobaImg from "./images/ehioba.jpeg";
 import TwitterX from "./images/twitterx.jpg";
 import Partners from "./images/partners.jpg";
+import Partner1 from "./images/partner1.png";
 
 export const LOGO =
-  "https://res.cloudinary.com/dk9bt9lkn/image/upload/v1692541421/ehioba/Ehioba_green_3_hiylnr.png";
+	"https://res.cloudinary.com/dk9bt9lkn/image/upload/v1692541421/ehioba/Ehioba_green_3_hiylnr.png";
 export const SLIDER_IMAGE_1 = SliderImg1;
 export const SLIDER_IMAGE_2 = SliderImg2;
 export const SLIDER_IMAGE_3 = SliderImg3;
@@ -48,3 +49,4 @@ export const SUPPORT_IMG = SupportImg;
 export const EHIOBA_IMG = EhiobaImg;
 export const TwitterXImg = TwitterX;
 export const PARTNERS_IMG = Partners;
+export const PARTNER1 = Partner1;

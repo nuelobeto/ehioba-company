@@ -184,3 +184,4 @@ export const ApproachImage = styled(OverviewImage)`
     }
   }
 `;
+
