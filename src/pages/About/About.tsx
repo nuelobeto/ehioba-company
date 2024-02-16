@@ -69,7 +69,6 @@ const About = () => {
 					<SectionText>
 						<SectionTitle>Meet the Chief Executive Officer</SectionTitle>
 						<div>
-							<h4>FOUNDER</h4>
 							<h2> Osayomwanbor Wilfred Ehioba </h2>
 							<h4 style={{ marginTop: "2rem" }}>SHORT BIO</h4>
 							<p>
