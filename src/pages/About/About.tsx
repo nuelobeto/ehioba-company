@@ -3,7 +3,7 @@ import {
 	ABOUT_IMAGE,
 	WHO_WE_ARE,
 	EHIOBA_IMG,
-	PARTNERS_IMG,
+	// PARTNERS_IMG,
 	PARTNER1,
 } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
@@ -40,10 +40,11 @@ const About = () => {
 					<SectionText>
 						<SectionTitle>Who We Are</SectionTitle>
 						<p>
-							We believe that sustainability is not just an obligation, but an
-							opportunity, and we are committed to working with our clients to
-							help them achieve their sustainability goals in a way that aligns
-							with their business objectives and values.
+							Ehioba and Company is a clean energy company offering farmers and
+							food manufacturers access to clean energy solutions, including
+							Solar PV, Solar Thermal, Inverter, and Battery Storage, along with
+							complimentary sustainability services to meet their energy needs
+							and increase the social impact on the environment.
 						</p>
 					</SectionText>
 					<OverviewImage>
@@ -53,12 +54,11 @@ const About = () => {
 			</Section>
 			<Section $bg={`${COLORS.bgGreen}`}>
 				<SectionContainer style={Container}>
-					<DarkSectionTitle>Why US</DarkSectionTitle>
+					<DarkSectionTitle>Vision</DarkSectionTitle>
 					<SectionText style={{ textAlign: "center" }}>
 						<p>
-							Ehioba & Company is committed to delivering a standardize, cost -
-							effective and digitalised process, ensuring a smooth and effective
-							transition for your organisation.
+							Leading the charge towards a carbon-neutral agriculture industry
+							powered by clean, renewable energy.
 						</p>
 					</SectionText>
 				</SectionContainer>
@@ -98,7 +98,7 @@ const About = () => {
 					</SectionText>
 				</SectionContainer>
 			</Section>
-			<Section>
+			{/* <Section>
 				<SectionContainer style={Container} $display={"flex"}>
 					<SectionText>
 						<SectionTitle>Key Partnership Benefits</SectionTitle>
@@ -119,8 +119,8 @@ const About = () => {
 						<img src={PARTNERS_IMG} alt="partnership" />
 					</OverviewImage>
 				</SectionContainer>
-			</Section>
-			<Section $bg={`${COLORS.bgGreen}`}>
+			</Section> */}
+			<Section>
 				<SectionContainer style={Container}>
 					<DarkSectionTitle>Our Partners</DarkSectionTitle>
 					<div

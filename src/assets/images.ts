@@ -22,6 +22,9 @@ import EhiobaImg from "./images/ehioba.jpeg";
 import TwitterX from "./images/twitterx.jpg";
 import Partners from "./images/partners.jpg";
 import Partner1 from "./images/partner1.png";
+import ecofarm from "./images/EcoFarm3 1.png";
+import panel1 from "./images/panel1.jpg";
+import panel2 from "./images/panel2.jpg";
 
 export const LOGO =
 	"https://res.cloudinary.com/dk9bt9lkn/image/upload/v1692541421/ehioba/Ehioba_green_3_hiylnr.png";
@@ -50,3 +53,6 @@ export const EHIOBA_IMG = EhiobaImg;
 export const TwitterXImg = TwitterX;
 export const PARTNERS_IMG = Partners;
 export const PARTNER1 = Partner1;
+export const ECOFARM = ecofarm;
+export const PANEL1 = panel1;
+export const PANEL2 = panel2;

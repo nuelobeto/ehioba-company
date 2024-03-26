@@ -2,28 +2,33 @@ import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar";
 import { COLORS } from "../../utils/colors";
 import { Container } from "../../components/Navbar/styles";
-import { OVERVIEW_IMAGE, PARTNER1 } from "../../assets/images";
+import {
+	ECOFARM,
+	OVERVIEW_IMAGE,
+	PANEL1,
+	PANEL2,
+	PARTNER1,
+} from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
+import // CardsData,
+// ServicesData,
+// SolutionsCardsData,
+"../../utils/constants";
 import {
-	CardsData,
-	ServicesData,
-	SolutionsCardsData,
-} from "../../utils/constants";
-import {
-	ApproachContainer,
-	ApproachImage,
-	ApproachText,
+	// ApproachContainer,
+	// ApproachImage,
+	// ApproachText,
 	Button,
-	Card,
-	CardContainer,
-	LinkButton,
+	// Card,
+	// CardContainer,
+	// LinkButton,
 	OverviewImage,
 	Section,
 	SectionContainer,
 	SectionText,
 	SectionTitle,
-	SolutionsCard,
+	// SolutionsCard,
 } from "./style";
 import { useEffect } from "react";
 import { DarkSectionTitle } from "../About/style";
@@ -46,11 +51,11 @@ const Home = () => {
 			<Section>
 				<SectionContainer style={Container} $display={"flex"}>
 					<SectionText>
-						<SectionTitle>Our Overview</SectionTitle>
+						<SectionTitle>Who We Are</SectionTitle>
 						<p>
-							we are a global and progressive Environmental, Social and
-							Governance consultancy committed to building a future where
-							economic success and social responsibility co-exist.
+							We are a clean energy company passionate about transforming the
+							global food system by assisting farmers to produce sustainably and
+							reduce the cost of food production.
 						</p>
 						<Button
 							onClick={() => {
@@ -65,53 +70,61 @@ const Home = () => {
 				</SectionContainer>
 			</Section>
 			<Section $bg={`${COLORS.lightGray}`}>
-				<SectionContainer style={Container}>
-					<SectionTitle>Our Services</SectionTitle>
-					<CardContainer>
-						{CardsData.map((card, index) => (
-							<Card key={index}>
-								<h3>{card.mainText}</h3>
-								<p>{card.subText}</p>
-								<LinkButton
-									onClick={() => {
-										navigate("/about");
-									}}>
-									Learn More
-								</LinkButton>
-							</Card>
-						))}
-					</CardContainer>
+				<SectionContainer style={Container} $display={"flex"}>
+					<OverviewImage>
+						<img src={ECOFARM} alt="overview" />
+					</OverviewImage>
+					<SectionText>
+						<SectionTitle>
+							Service: EcoFarm Energy (available soon)
+						</SectionTitle>
+						<p>
+							On our energy-as-a-service platform, farmers and food
+							manufacturers can access clean energy solutions, including Solar
+							Thermal & Solar PV, Inverter, and Battery Storage, along with
+							complimentary sustainability services to meet their energy needs
+							and reduce emissions.
+						</p>
+					</SectionText>
 				</SectionContainer>
+
+				<div
+					style={{
+						display: "flex",
+						gap: "1rem",
+						maxWidth: "1000px",
+						width: "100%",
+						margin: "2rem auto 0",
+					}}>
+					<OverviewImage>
+						<img src={PANEL1} alt="overview" />
+					</OverviewImage>
+					<OverviewImage>
+						<img src={PANEL2} alt="overview" />
+					</OverviewImage>
+				</div>
 			</Section>
-			<Section>
+
+			<Section $bg={`${COLORS.bgGreen}`}>
 				<SectionContainer style={Container}>
-					<SectionTitle>Our Approach</SectionTitle>
-					<ApproachContainer>
-						{ServicesData.map((service, index) => (
-							<div className="common" key={index}>
-								<ApproachText>
-									<h3>{service.mainText}</h3>
-									<p>{service.subText}</p>
-								</ApproachText>
-								<ApproachImage>
-									<img src={service.image} alt={service.mainText} />
-								</ApproachImage>
-							</div>
-						))}
-					</ApproachContainer>
-				</SectionContainer>
-			</Section>
-			<Section $bg={`${COLORS.lightGray}`}>
-				<SectionContainer style={Container}>
-					<SectionTitle>Our Solution</SectionTitle>
-					<CardContainer>
+					<SectionTitle>Why We Are Different</SectionTitle>
+					{/* <CardContainer>
 						{SolutionsCardsData.map((card, index) => (
 							<SolutionsCard key={index}>
 								<h3>{card.mainText}</h3>
 								<p>{card.subText}</p>
 							</SolutionsCard>
 						))}
-					</CardContainer>
+					</CardContainer> */}
+					<p>
+						With our platform, customers have the flexibility to subscribe to
+						any of our packages tailored to meet their business needs.
+						Additionally, customers have their portal where they can create,
+						manage their accounts, and track their energy usage. We offer
+						complimentary sustainability services, such as carbon accounting and
+						reporting, exclusively available for clients subscribed to our
+						Standard and Premium plans.
+					</p>
 				</SectionContainer>
 			</Section>
 			<Section>
