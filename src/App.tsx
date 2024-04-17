@@ -5,14 +5,14 @@ import "react-toastify/dist/ReactToastify.css";
 import usePostEffects from "./hooks/usePostEffects";
 
 const App = () => {
-  usePostEffects();
+	usePostEffects();
 
-  return (
-    <BrowserRouter>
-      <AppRoutes />
-      <ToastContainer />
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<AppRoutes />
+			<ToastContainer theme="dark" />
+		</BrowserRouter>
+	);
 };
 
 export default App;

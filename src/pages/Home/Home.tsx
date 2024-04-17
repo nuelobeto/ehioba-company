@@ -11,24 +11,14 @@ import {
 } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
-import // CardsData,
-// ServicesData,
-// SolutionsCardsData,
-"../../utils/constants";
+import "../../utils/constants";
 import {
-	// ApproachContainer,
-	// ApproachImage,
-	// ApproachText,
 	Button,
-	// Card,
-	// CardContainer,
-	// LinkButton,
 	OverviewImage,
 	Section,
 	SectionContainer,
 	SectionText,
 	SectionTitle,
-	// SolutionsCard,
 } from "./style";
 import { useEffect } from "react";
 import { DarkSectionTitle } from "../About/style";
@@ -88,14 +78,7 @@ const Home = () => {
 					</SectionText>
 				</SectionContainer>
 
-				<div
-					style={{
-						display: "flex",
-						gap: "1rem",
-						maxWidth: "1000px",
-						width: "100%",
-						margin: "2rem auto 0",
-					}}>
+				<div className="grid grid-cols-1 sm:grid-cols-2 gap-[2rem] max-w-[1000px] my-[2rem] mx-auto px-[32px]">
 					<OverviewImage>
 						<img src={PANEL1} alt="overview" />
 					</OverviewImage>
@@ -104,18 +87,9 @@ const Home = () => {
 					</OverviewImage>
 				</div>
 			</Section>
-
 			<Section $bg={`${COLORS.bgGreen}`}>
 				<SectionContainer style={Container}>
 					<SectionTitle>Why We Are Different</SectionTitle>
-					{/* <CardContainer>
-						{SolutionsCardsData.map((card, index) => (
-							<SolutionsCard key={index}>
-								<h3>{card.mainText}</h3>
-								<p>{card.subText}</p>
-							</SolutionsCard>
-						))}
-					</CardContainer> */}
 					<p>
 						With our platform, customers have the flexibility to subscribe to
 						any of our packages tailored to meet their business needs.
@@ -127,6 +101,36 @@ const Home = () => {
 					</p>
 				</SectionContainer>
 			</Section>
+			<div className="p-[32px] pt-[64px] grid grid-cols-2 md:grid-cols-4 gap-[16px] max-w-[800px] mx-auto">
+				<div className="rounded-[20px] overflow-hidden">
+					<img
+						src="/assets/images/zero_hunger.png"
+						alt=""
+						className="w-full block"
+					/>
+				</div>
+				<div className="rounded-[20px] overflow-hidden">
+					<img
+						src="/assets/images/clean_energy.jpg"
+						alt=""
+						className="w-full block"
+					/>
+				</div>
+				<div className="rounded-[20px] overflow-hidden">
+					<img
+						src="/assets/images/sdg_industry.png"
+						alt=""
+						className="w-full block"
+					/>
+				</div>
+				<div className="rounded-[20px] overflow-hidden">
+					<img
+						src="/assets/images/climate_action.jpg"
+						alt=""
+						className="w-full block"
+					/>
+				</div>
+			</div>
 			<Section>
 				<SectionContainer style={Container}>
 					<DarkSectionTitle>Our Partners</DarkSectionTitle>

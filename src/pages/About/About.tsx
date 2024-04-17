@@ -3,7 +3,6 @@ import {
 	ABOUT_IMAGE,
 	WHO_WE_ARE,
 	EHIOBA_IMG,
-	// PARTNERS_IMG,
 	PARTNER1,
 } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
@@ -63,7 +62,6 @@ const About = () => {
 					</SectionText>
 				</SectionContainer>
 			</Section>
-
 			<Section>
 				<SectionContainer style={Container} $display={"flex"}>
 					<SectionText>
@@ -87,9 +85,88 @@ const About = () => {
 					</OverviewImage>
 				</SectionContainer>
 			</Section>
+			<Section>
+				<SectionContainer style={Container}>
+					<div className="flex items-center justify-center mb-[2rem]">
+						<SectionTitle>The Advisory Board</SectionTitle>
+					</div>
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[2rem]">
+						<div className="flex flex-col gap-[1rem]">
+							<img
+								src="/assets/images/dominic.jpg"
+								alt=""
+								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+							/>
+							<div className="flex flex-col gap-[1rem]">
+								<h2 className=" font-bold">Dominick McOmish</h2>
+								<p>
+									Dominick currently works as the Marketing and Events Officer
+									for the University of Lincoln's Enterprise and Innovation
+									team, supporting the university's managed office spaces and
+									business support.
+								</p>
+							</div>
+						</div>
+
+						<div className="flex flex-col gap-[1rem]">
+							<img
+								src="/assets/images/reece.jpg"
+								alt=""
+								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+							/>
+							<div className="flex flex-col gap-[1rem]">
+								<h2 className=" font-bold">Reece Leggett</h2>
+								<p>
+									Reece is the Student Enterprise Manager at the University of
+									Lincoln. He leads the Student Enterprise activity across the
+									institution and support students in crafting their business
+									plans, developing their pitches, and identifying the resources
+									they need to launch their businesses.
+								</p>
+							</div>
+						</div>
+
+						<div className="flex flex-col gap-[1rem]">
+							<img
+								src="/assets/images/ginny.jpg"
+								alt=""
+								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+							/>
+							<div className="flex flex-col gap-[1rem]">
+								<h2 className=" font-bold">Ginny Walker</h2>
+								<p>
+									Ginny Walker works as a Business Advisor for the City of
+									Lincoln Council,supporting businesses and enterprising
+									individuals achieve their goals. She has 18 years’ experience
+									running a family owned business, nurturing it from start up
+									through to a successful management buy out.
+								</p>
+							</div>
+						</div>
+
+						<div className="flex flex-col gap-[1rem]">
+							<img
+								src="/assets/images/jaq.jpg"
+								alt=""
+								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+							/>
+							<div className="flex flex-col gap-[1rem]">
+								<h2 className=" font-bold">Jacqueline Gray</h2>
+								<p>
+									Jacqueline Gray is the Director of Regional
+									Engagement(Business & Operations) at the University of
+									Lincoln. She joined the University of Lincoln in 2014 to help
+									support the launch of the School of Chemistry & the School of
+									Maths & Physics and gained further experience working in
+									several senior leadership roles in the College of Science.
+								</p>
+							</div>
+						</div>
+					</div>
+				</SectionContainer>
+			</Section>
 			<Section $bg={`${COLORS.bgGreen}`}>
 				<SectionContainer style={Container}>
-					{/* <DarkSectionTitle>Summary</DarkSectionTitle> */}
 					<SectionText style={{ textAlign: "center" }}>
 						<p style={{ fontSize: "25px", fontWeight: 500 }}>
 							Position your business to harness future opportunities by adopting
@@ -98,28 +175,6 @@ const About = () => {
 					</SectionText>
 				</SectionContainer>
 			</Section>
-			{/* <Section>
-				<SectionContainer style={Container} $display={"flex"}>
-					<SectionText>
-						<SectionTitle>Key Partnership Benefits</SectionTitle>
-						<div>
-							<h4>OPERATIONAL RESILIENCE</h4>
-							<p>
-								Mitigate risk and adapt to changing regulatory requirements,
-								ensuring long-term operational stability
-							</p>
-							<h4 style={{ marginTop: "2rem" }}>ENHANCED BRAND REPUTATION</h4>
-							<p>
-								Establish your brand as a sustainable leader, gaining a
-								competitive edge in the market.
-							</p>
-						</div>
-					</SectionText>
-					<OverviewImage>
-						<img src={PARTNERS_IMG} alt="partnership" />
-					</OverviewImage>
-				</SectionContainer>
-			</Section> */}
 			<Section>
 				<SectionContainer style={Container}>
 					<DarkSectionTitle>Our Partners</DarkSectionTitle>
