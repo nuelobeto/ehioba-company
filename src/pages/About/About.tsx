@@ -88,40 +88,24 @@ const About = () => {
 			<Section>
 				<SectionContainer style={Container}>
 					<div className="flex items-center justify-center mb-[2rem]">
-						<SectionTitle>The Advisory Board</SectionTitle>
+						<SectionTitle>Our Advisory Board</SectionTitle>
 					</div>
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[2rem]">
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[2rem]">
 						<div className="flex flex-col gap-[1rem]">
 							<img
-								src="/assets/images/dominic.jpg"
+								src="/assets/images/jaq.jpg"
 								alt=""
-								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+								className="w-full rounded-[12px] aspect-[1/1.1] object-cover"
 							/>
-							<div className="flex flex-col gap-[1rem]">
-								<h2 className=" font-bold">Dominick McOmish</h2>
-								<p>
-									Dominick currently works as the Marketing and Events Officer
-									for the University of Lincoln's Enterprise and Innovation
-									team, supporting the university's managed office spaces and
-									business support.
-								</p>
-							</div>
-						</div>
-
-						<div className="flex flex-col gap-[1rem]">
-							<img
-								src="/assets/images/reece.jpg"
-								alt=""
-								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
-							/>
-							<div className="flex flex-col gap-[1rem]">
-								<h2 className=" font-bold">Reece Leggett</h2>
-								<p>
-									Reece is the Student Enterprise Manager at the University of
-									Lincoln. He leads the Student Enterprise activity across the
-									institution and support students in crafting their business
-									plans, developing their pitches, and identifying the resources
-									they need to launch their businesses.
+							<div className="flex flex-col gap-[1rem] text-center">
+								<h2 className=" font-bold">Jacqueline Gray</h2>
+								<p className="text-sm">
+									Jacqueline Gray is the Director of Regional
+									Engagement(Business & Operations) at the University of
+									Lincoln. She joined the University of Lincoln in 2014 to help
+									support the launch of the School of Chemistry & the School of
+									Maths & Physics and gained further experience working in
+									several senior leadership roles in the College of Science.
 								</p>
 							</div>
 						</div>
@@ -130,11 +114,11 @@ const About = () => {
 							<img
 								src="/assets/images/ginny.jpg"
 								alt=""
-								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+								className="w-full rounded-[12px] aspect-[1/1.1] object-cover"
 							/>
-							<div className="flex flex-col gap-[1rem]">
+							<div className="flex flex-col gap-[1rem] text-center">
 								<h2 className=" font-bold">Ginny Walker</h2>
-								<p>
+								<p className="text-sm">
 									Ginny Walker works as a Business Advisor for the City of
 									Lincoln Council,supporting businesses and enterprising
 									individuals achieve their goals. She has 18 years’ experience
@@ -146,19 +130,35 @@ const About = () => {
 
 						<div className="flex flex-col gap-[1rem]">
 							<img
-								src="/assets/images/jaq.jpg"
+								src="/assets/images/reece.jpg"
 								alt=""
-								className="w-full rounded-[12px] aspect-[1/1.2] object-cover"
+								className="w-full rounded-[12px] aspect-[1/1.1] object-cover"
 							/>
-							<div className="flex flex-col gap-[1rem]">
-								<h2 className=" font-bold">Jacqueline Gray</h2>
-								<p>
-									Jacqueline Gray is the Director of Regional
-									Engagement(Business & Operations) at the University of
-									Lincoln. She joined the University of Lincoln in 2014 to help
-									support the launch of the School of Chemistry & the School of
-									Maths & Physics and gained further experience working in
-									several senior leadership roles in the College of Science.
+							<div className="flex flex-col gap-[1rem] text-center">
+								<h2 className=" font-bold">Reece Leggett</h2>
+								<p className="text-sm">
+									Reece is the Student Enterprise Manager at the University of
+									Lincoln. He leads the Student Enterprise activity across the
+									institution and support students in crafting their business
+									plans, developing their pitches, and identifying the resources
+									they need to launch their businesses.
+								</p>
+							</div>
+						</div>
+
+						<div className="flex flex-col gap-[1rem]">
+							<img
+								src="/assets/images/dominic.jpg"
+								alt=""
+								className="w-full rounded-[12px] aspect-[1/1.1] object-cover"
+							/>
+							<div className="flex flex-col gap-[1rem] text-center">
+								<h2 className=" font-bold">Dominick McOmish</h2>
+								<p className="text-sm">
+									Dominick currently works as the Marketing and Events Officer
+									for the University of Lincoln's Enterprise and Innovation
+									team, supporting the university's managed office spaces and
+									business support.
 								</p>
 							</div>
 						</div>

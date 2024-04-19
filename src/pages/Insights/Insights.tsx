@@ -38,6 +38,8 @@ const Insights = () => {
 		"/assets/images/insight_page_2.jpg",
 		"/assets/images/insight_page_3.jpg",
 		"/assets/images/insight_page_4.jpg",
+		"/assets/images/insight_page_5.jpg",
+		"/assets/images/insight_page_6.jpg",
 	];
 
 	emailjs.init("xqWpsXYZEMl_9cRlJ");
@@ -150,15 +152,21 @@ const Insights = () => {
 				</section>
 
 				<section className="bg-gray-50">
-					<div className="max-w-[1000px] mx-auto px-[2rem] py-[4rem] pb-[6rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[2rem]">
-						{eventsImg.map((img, index) => (
-							<img
-								key={index}
-								src={img}
-								alt=""
-								className="rounded-[12px] aspect-[1/1.2] object-cover"
-							/>
-						))}
+					<div className="max-w-[1000px] mx-auto px-[2rem] py-[4rem] pb-[6rem]">
+						<h2 className="text-3xl text-center font-bold mb-[4rem]">
+							EcoFarm Energy Gallery
+						</h2>
+
+						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[2rem]">
+							{eventsImg.map((img, index) => (
+								<img
+									key={index}
+									src={img}
+									alt=""
+									className="rounded-[12px] aspect-[1/1.2] object-cover"
+								/>
+							))}
+						</div>
 					</div>
 				</section>
 			</main>

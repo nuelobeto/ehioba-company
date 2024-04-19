@@ -101,36 +101,44 @@ const Home = () => {
 					</p>
 				</SectionContainer>
 			</Section>
-			<div className="p-[32px] pt-[64px] grid grid-cols-2 md:grid-cols-4 gap-[16px] max-w-[800px] mx-auto">
-				<div className="rounded-[20px] overflow-hidden">
-					<img
-						src="/assets/images/zero_hunger.png"
-						alt=""
-						className="w-full block"
-					/>
-				</div>
-				<div className="rounded-[20px] overflow-hidden">
-					<img
-						src="/assets/images/clean_energy.jpg"
-						alt=""
-						className="w-full block"
-					/>
-				</div>
-				<div className="rounded-[20px] overflow-hidden">
-					<img
-						src="/assets/images/sdg_industry.png"
-						alt=""
-						className="w-full block"
-					/>
-				</div>
-				<div className="rounded-[20px] overflow-hidden">
-					<img
-						src="/assets/images/climate_action.jpg"
-						alt=""
-						className="w-full block"
-					/>
-				</div>
-			</div>
+			<Section>
+				<SectionContainer style={Container}>
+					<h2 className="text-center font-bold text-[22px]">
+						WE SUPPORT THE UNITED NATIONS <br /> SUSTAINABLE DEVELOPMENT GOALS
+					</h2>
+
+					<div className="p-[32px] pt-[64px] grid grid-cols-2 md:grid-cols-4 gap-[16px] max-w-[800px] mx-auto">
+						<div className="rounded-[20px] overflow-hidden">
+							<img
+								src="/assets/images/zero_hunger.png"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
+						<div className="rounded-[20px] overflow-hidden">
+							<img
+								src="/assets/images/clean_energy.jpg"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
+						<div className="rounded-[20px] overflow-hidden">
+							<img
+								src="/assets/images/sdg_industry.png"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
+						<div className="rounded-[20px] overflow-hidden">
+							<img
+								src="/assets/images/climate_action.jpg"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
+					</div>
+				</SectionContainer>
+			</Section>
 			<Section>
 				<SectionContainer style={Container}>
 					<DarkSectionTitle>Our Partners</DarkSectionTitle>

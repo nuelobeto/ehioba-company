@@ -57,7 +57,7 @@ const Footer = () => {
 						</a>
 
 						<a
-							href="https://instagram.com/ehiobaco?igshid=MjEwN2IyYWYwYw=="
+							href="https://www.instagram.com/ecofarm.energy?utm_source=qr&igsh=MzNlNGNkZWQ4Mg=="
 							target="_blank"
 							rel="noreferrer">
 							<AiFillInstagram />
