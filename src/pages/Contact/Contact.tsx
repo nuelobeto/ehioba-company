@@ -16,6 +16,8 @@ import {
 	ContactButton,
 } from "./style";
 import emailjs from "emailjs-com";
+import { ImSpinner8 } from "react-icons/im";
+import { toast } from "react-toastify";
 
 const Contact = () => {
 	const [firstName, setFirstName] = useState("");
@@ -23,6 +25,7 @@ const Contact = () => {
 	const [companyName, setCompanyName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	emailjs.init("xqWpsXYZEMl_9cRlJ");
 
@@ -36,12 +39,17 @@ const Contact = () => {
 			message: message,
 		};
 
+		setLoading(true);
 		emailjs.send("service_p6so8ya", "template_76l9b8j", emailParams).then(
 			(result) => {
 				console.log("Email sent successfully:", result.text);
+				setLoading(false);
+				toast.success("Email sent successfully.");
 			},
 			(error) => {
 				console.log("Error sending email:", error);
+				setLoading(false);
+				toast.success("Email sent successfully.");
 			}
 		);
 	};
@@ -128,7 +136,9 @@ const Contact = () => {
 							required
 						/>
 					</ContactInput>
-					<ContactButton>SEND</ContactButton>
+					<ContactButton>
+						{loading ? <ImSpinner8 className="spinner font-[18px]" /> : "Send"}
+					</ContactButton>
 				</ContactForm>
 			</ContactContainer>
 			<Footer />

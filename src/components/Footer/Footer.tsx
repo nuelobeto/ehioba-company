@@ -1,20 +1,53 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { LOGO, TwitterXImg } from "../../assets/images";
 import { AiFillLinkedin, AiFillMail, AiFillInstagram } from "react-icons/ai";
 import {
-	Button,
 	Container,
 	CopyRight,
 	FooterContainer,
 	FooterLogo,
 	FooterSection,
-	Input,
 	Socials,
 } from "./style";
 import { useNavigate } from "react-router-dom";
 import { CompanyLinks, SupportLinks } from "../../utils/constants";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import { ImSpinner8 } from "react-icons/im";
 
 const Footer = () => {
+	const [email, setEmail] = useState("");
+	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
+
+	emailjs.init("xqWpsXYZEMl_9cRlJ");
+
+	const sendEmail = (e: any) => {
+		e.preventDefault();
+
+		const emailParams = {
+			sender: email,
+			name: email,
+			company: "",
+			message: `${email} subscribed to your newsletter.`,
+		};
+
+		setLoading(true);
+		emailjs.send("service_p6so8ya", "template_76l9b8j", emailParams).then(
+			(result) => {
+				console.log("Email sent successfully:", result.text);
+				setLoading(false);
+				toast.success("You have subscribed to our Newsletter.");
+			},
+			(error) => {
+				console.log("Error sending email:", error);
+				setLoading(false);
+				toast.error("An error occured. Try again.");
+			}
+		);
+	};
+
 	return (
 		<FooterContainer>
 			<Container>
@@ -73,8 +106,22 @@ const Footer = () => {
 				<FooterSection>
 					<h3>Newsletter</h3>
 					<p>Subscribe to our newsletter</p>
-					<Input type="email" placeholder="Enter your email" required />
-					<Button disabled>JOIN</Button>
+					<input
+						type="email"
+						placeholder="Enter your Email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						className="border w-full text-black h-[44px] rounded-[6px] outline-none px-[14px] mb-[8px]"
+					/>
+					<button
+						className="py-[1rem] px-[1.5rem] bg-[#2A7C6F] text-white rounded-[6px] h-[44px] flex items-center justify-center"
+						onClick={sendEmail}>
+						{loading ? (
+							<ImSpinner8 className="spinner font-[18px]" />
+						) : (
+							"Subscribe"
+						)}
+					</button>
 				</FooterSection>
 			</Container>
 			<CopyRight>
