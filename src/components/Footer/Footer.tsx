@@ -80,7 +80,7 @@ const Footer = () => {
 					<p>+447988521615</p>
 					<Socials>
 						<a
-							href="https://www.linkedin.com/company/ehioba-company/"
+							href="https://www.linkedin.com/company/ecofarm-energy/"
 							target="_blank"
 							rel="noreferrer">
 							<AiFillLinkedin />
