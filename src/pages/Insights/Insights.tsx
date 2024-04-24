@@ -42,7 +42,7 @@ const Insights = () => {
 		"/assets/images/insight_page_6.jpg",
 	];
 
-	emailjs.init("xqWpsXYZEMl_9cRlJ");
+	emailjs.init("8O5VNpUZ4qhHc44MY");
 
 	const sendEmail = (e: any) => {
 		e.preventDefault();
@@ -50,12 +50,11 @@ const Insights = () => {
 		const emailParams = {
 			sender: email,
 			name: firstName,
-			company: "",
 			message: `${firstName} joined the EcoFarm Energy Waitlist.`,
 		};
 
 		setLoading(true);
-		emailjs.send("service_p6so8ya", "template_76l9b8j", emailParams).then(
+		emailjs.send("service_4ddvjnh", "template_dcofa6l", emailParams).then(
 			(result) => {
 				console.log("Email sent successfully:", result.text);
 				setLoading(false);

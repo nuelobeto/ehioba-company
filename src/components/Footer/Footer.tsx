@@ -21,7 +21,7 @@ const Footer = () => {
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
 
-	emailjs.init("xqWpsXYZEMl_9cRlJ");
+	emailjs.init("8O5VNpUZ4qhHc44MY");
 
 	const sendEmail = (e: any) => {
 		e.preventDefault();
@@ -29,12 +29,11 @@ const Footer = () => {
 		const emailParams = {
 			sender: email,
 			name: email,
-			company: "",
 			message: `${email} subscribed to your newsletter.`,
 		};
 
 		setLoading(true);
-		emailjs.send("service_p6so8ya", "template_76l9b8j", emailParams).then(
+		emailjs.send("service_4ddvjnh", "template_dcofa6l", emailParams).then(
 			(result) => {
 				console.log("Email sent successfully:", result.text);
 				setLoading(false);

@@ -27,7 +27,7 @@ const Contact = () => {
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
 
-	emailjs.init("xqWpsXYZEMl_9cRlJ");
+	emailjs.init("8O5VNpUZ4qhHc44MY");
 
 	const sendEmail = (e: any) => {
 		e.preventDefault();
@@ -40,7 +40,7 @@ const Contact = () => {
 		};
 
 		setLoading(true);
-		emailjs.send("service_p6so8ya", "template_76l9b8j", emailParams).then(
+		emailjs.send("service_4ddvjnh", "template_bh10qba", emailParams).then(
 			(result) => {
 				console.log("Email sent successfully:", result.text);
 				setLoading(false);
