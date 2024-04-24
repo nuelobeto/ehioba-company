@@ -95,7 +95,7 @@ const Footer = () => {
 							<AiFillInstagram />
 						</a>
 						<a
-							href="https://twitter.com/ehiobacom"
+							href="https://twitter.com/EcoFarmEnergy"
 							target="_blank"
 							rel="noreferrer">
 							<img src={TwitterXImg} alt="" />
