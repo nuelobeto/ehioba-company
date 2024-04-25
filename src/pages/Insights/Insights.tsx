@@ -6,8 +6,7 @@ import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import { ImSpinner8 } from "react-icons/im";
 import { Container } from "../../components/Navbar/styles";
-import { COLORS } from "../../utils/colors";
-import { Section, SectionContainer, SectionTitle } from "../Home/style";
+import { Section, SectionContainer } from "../Home/style";
 
 const Insights = () => {
 	const [firstName, setFirstName] = useState("");
@@ -172,23 +171,25 @@ const Insights = () => {
 						</div>
 					</div>
 				</section>
-				<Section $bg={`${COLORS.bgGreen}`}>
+				<Section>
 					<SectionContainer style={Container}>
-						<SectionTitle>Membership & Industry Partnerships</SectionTitle>
+						<h2 className="text-2xl text-center font-bold mb-[32px]">
+							Membership and companies we are working with
+						</h2>
 
-						<div className="pt-[2rem] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
-							<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl">
+						<div className="flex flex-wrap justify-center gap-[16px] w-full mx-auto">
+							<div className="w-[200px] h-[200px] flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
 								<img
 									src="/assets/images/partner1.png"
 									alt=""
 									className="w-full block"
 								/>
 							</div>
-							<div className="flex items-center justify-center rounded-[20px]">
+							<div className="w-[200px] h-[200px] flex items-center justify-center rounded-[20px] shadow-xl">
 								<img
 									src="/assets/images/powervaultlogo.jpg"
 									alt=""
-									className="w-full block rounded-[20px] shadow-xl"
+									className="w-full h-full object-cover block rounded-[20px] shadow-xl"
 								/>
 							</div>
 						</div>

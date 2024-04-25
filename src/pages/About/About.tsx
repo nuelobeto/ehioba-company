@@ -172,17 +172,19 @@ const About = () => {
 			</Section>
 			<Section>
 				<SectionContainer style={Container}>
-					<SectionTitle>Membership & Industry Partnerships</SectionTitle>
+					<h2 className="text-2xl text-center font-bold mb-[32px]">
+						Membership and companies we are working with
+					</h2>
 
-					<div className="pt-[2rem] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
-						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
+					<div className="flex flex-wrap justify-center gap-[16px] w-full mx-auto">
+						<div className="w-[200px] h-[200px] flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
 							<img
 								src="/assets/images/partner1.png"
 								alt=""
 								className="w-full block"
 							/>
 						</div>
-						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
+						<div className="w-[200px] h-[200px] flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
 							<img
 								src="/assets/images/powervault.png"
 								alt=""
