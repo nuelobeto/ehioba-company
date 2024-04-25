@@ -2,13 +2,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar";
 import { COLORS } from "../../utils/colors";
 import { Container } from "../../components/Navbar/styles";
-import {
-	ECOFARM,
-	OVERVIEW_IMAGE,
-	PANEL1,
-	PANEL2,
-	PARTNER1,
-} from "../../assets/images";
+import { ECOFARM, OVERVIEW_IMAGE } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import "../../utils/constants";
@@ -21,7 +15,6 @@ import {
 	SectionTitle,
 } from "./style";
 import { useEffect } from "react";
-import { DarkSectionTitle } from "../About/style";
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -80,10 +73,10 @@ const Home = () => {
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-[2rem] max-w-[1000px] my-[2rem] mx-auto px-[32px]">
 					<OverviewImage>
-						<img src={PANEL1} alt="overview" />
+						<img src="/assets/images/dashboardimg.jpg" alt="overview" />
 					</OverviewImage>
 					<OverviewImage>
-						<img src={PANEL2} alt="overview" />
+						<img src="/assets/images/powervaultimg.jpg" alt="overview" />
 					</OverviewImage>
 				</div>
 			</Section>
@@ -107,7 +100,7 @@ const Home = () => {
 						WE SUPPORT THE UNITED NATIONS <br /> SUSTAINABLE DEVELOPMENT GOALS
 					</h2>
 
-					<div className="p-[32px] pt-[64px] grid grid-cols-2 md:grid-cols-4 gap-[16px] max-w-[800px] mx-auto">
+					<div className="pt-[32px] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
 						<div className="rounded-[20px] overflow-hidden">
 							<img
 								src="/assets/images/zero_hunger.png"
@@ -139,21 +132,25 @@ const Home = () => {
 					</div>
 				</SectionContainer>
 			</Section>
-			<Section>
+			<Section $bg={`${COLORS.bgGreen}`}>
 				<SectionContainer style={Container}>
-					<DarkSectionTitle>Our Partners</DarkSectionTitle>
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-							paddingTop: "2rem",
-						}}>
-						<img
-							src={PARTNER1}
-							alt=""
-							style={{ width: "200px", display: "block" }}
-						/>
+					<SectionTitle>Membership & Industry Partnerships</SectionTitle>
+
+					<div className="pt-[2rem] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
+						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-sm">
+							<img
+								src="/assets/images/partner1.png"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
+						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-sm">
+							<img
+								src="/assets/images/powervault.png"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
 					</div>
 				</SectionContainer>
 			</Section>

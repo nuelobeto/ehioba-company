@@ -5,6 +5,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import { ImSpinner8 } from "react-icons/im";
+import { Container } from "../../components/Navbar/styles";
+import { COLORS } from "../../utils/colors";
+import { Section, SectionContainer, SectionTitle } from "../Home/style";
 
 const Insights = () => {
 	const [firstName, setFirstName] = useState("");
@@ -40,6 +43,7 @@ const Insights = () => {
 		"/assets/images/insight_page_4.jpg",
 		"/assets/images/insight_page_5.jpg",
 		"/assets/images/insight_page_6.jpg",
+		"/assets/images/powervault2.jpg",
 	];
 
 	emailjs.init("8O5VNpUZ4qhHc44MY");
@@ -168,6 +172,28 @@ const Insights = () => {
 						</div>
 					</div>
 				</section>
+				<Section $bg={`${COLORS.bgGreen}`}>
+					<SectionContainer style={Container}>
+						<SectionTitle>Membership & Industry Partnerships</SectionTitle>
+
+						<div className="pt-[2rem] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
+							<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl">
+								<img
+									src="/assets/images/partner1.png"
+									alt=""
+									className="w-full block"
+								/>
+							</div>
+							<div className="flex items-center justify-center rounded-[20px]">
+								<img
+									src="/assets/images/powervaultlogo.jpg"
+									alt=""
+									className="w-full block rounded-[20px] shadow-xl"
+								/>
+							</div>
+						</div>
+					</SectionContainer>
+				</Section>
 			</main>
 			<Footer />
 		</>
