@@ -137,14 +137,14 @@ const Home = () => {
 					<SectionTitle>Membership & Industry Partnerships</SectionTitle>
 
 					<div className="pt-[2rem] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
-						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-sm">
+						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl">
 							<img
 								src="/assets/images/partner1.png"
 								alt=""
 								className="w-full block"
 							/>
 						</div>
-						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-sm">
+						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl">
 							<img
 								src="/assets/images/powervault.png"
 								alt=""

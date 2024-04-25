@@ -1,10 +1,5 @@
 import { useEffect } from "react";
-import {
-	ABOUT_IMAGE,
-	WHO_WE_ARE,
-	EHIOBA_IMG,
-	PARTNER1,
-} from "../../assets/images";
+import { ABOUT_IMAGE, WHO_WE_ARE, EHIOBA_IMG } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import { Container } from "../../components/Navbar/styles";
@@ -177,19 +172,23 @@ const About = () => {
 			</Section>
 			<Section>
 				<SectionContainer style={Container}>
-					<DarkSectionTitle>Our Partners</DarkSectionTitle>
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-							paddingTop: "2rem",
-						}}>
-						<img
-							src={PARTNER1}
-							alt=""
-							style={{ width: "200px", display: "block" }}
-						/>
+					<SectionTitle>Membership & Industry Partnerships</SectionTitle>
+
+					<div className="pt-[2rem] grid grid-cols-2 md:grid-cols-4 gap-[16px] w-full mx-auto">
+						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
+							<img
+								src="/assets/images/partner1.png"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
+						<div className="flex items-center justify-center rounded-[20px] bg-white p-[16px] shadow-xl border">
+							<img
+								src="/assets/images/powervault.png"
+								alt=""
+								className="w-full block"
+							/>
+						</div>
 					</div>
 				</SectionContainer>
 			</Section>
